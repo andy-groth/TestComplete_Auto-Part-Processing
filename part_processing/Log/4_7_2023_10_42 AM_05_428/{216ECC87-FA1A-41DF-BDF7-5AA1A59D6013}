@@ -1,0 +1,1958 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="message 66">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="Python runtime error.&#xA;&#xA;AttributeError: 'IDispatchMethodWrapper' object has no attribute 'Message'&#xA;&#xA;Error location:&#xA;Unit: &quot;Part_Processing\part_processing\Script\insight&quot;&#xA;Line: 541 Column: 1."/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="message" type="S" value="AttributeError: 'IDispatchMethodWrapper' object has no attribute 'Message'"/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="date" type="D" value="45023.4470284722"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="1"/>
+			<Prp name="id" type="I" value="66"/>
+			<Prp name="line no" type="I" value="540"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 34">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Model Material Selected"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465603819"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="34"/>
+			<Prp name="line no" type="I" value="266"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 24">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="904"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="368"/>
+					<Prp name="click point y" type="I" value="386"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild.TkChild.TkChild.TkChild.TkChild.btn"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6547745023"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="922"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage17.png"/>
+					<Prp name="object bottom" type="I" value="404"/>
+					<Prp name="object left" type="I" value="886"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (18, 18) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild.TkChild.TkChild.TkChild.TkChild.btn&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Insight - 9mmbullet_1inch&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 2).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;Button&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4464420949"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="24"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 14">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="194"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6546376273"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="330"/>
+					<Prp name="line #" type="I" value="82"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage8.png"/>
+					<Prp name="object bottom" type="I" value="213"/>
+					<Prp name="object left" type="I" value="144"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Tab][Tab][Tab][Tab][Tab][Tab][Tab][Tab]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4463064699"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="line no" type="I" value="82"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 20">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6547474769"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="181"/>
+					<Prp name="line #" type="I" value="650"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage14.png"/>
+					<Prp name="object bottom" type="I" value="167"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4464149421"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="20"/>
+			<Prp name="line no" type="I" value="650"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 8">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="237"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="194"/>
+					<Prp name="click point y" type="I" value="203"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6545449537"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="330"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage2.png"/>
+					<Prp name="object bottom" type="I" value="213"/>
+					<Prp name="object left" type="I" value="144"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (93, 9) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4462127315"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 53">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6549919213"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="185"/>
+					<Prp name="line #" type="I" value="343"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage34.png"/>
+					<Prp name="object bottom" type="I" value="13"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropsliceHeight&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466590509"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="53"/>
+			<Prp name="line no" type="I" value="343"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 17">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="237"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="194"/>
+					<Prp name="click point y" type="I" value="203"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6547253241"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="330"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage11.png"/>
+					<Prp name="object bottom" type="I" value="213"/>
+					<Prp name="object left" type="I" value="144"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (93, 9) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4463929398"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="17"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.insight.wndTkTopLevel&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Insight - 9mmbullet_1inch&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The 'Insight - 9mmbullet_1inch' window was activated."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4459116204"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="33"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 32">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6548764352"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="181"/>
+					<Prp name="line #" type="I" value="264"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage23.png"/>
+					<Prp name="object bottom" type="I" value="167"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Down][Down][Down][Down][Down][Down][Down][Down][Down][Down]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelMaterial&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465476736"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="32"/>
+			<Prp name="line no" type="I" value="264"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 13">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.654605787"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="181"/>
+					<Prp name="line #" type="I" value="77"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage7.png"/>
+					<Prp name="object bottom" type="I" value="167"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4462862268"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="line no" type="I" value="77"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 12">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="194"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;Button&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6545980903"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="343"/>
+					<Prp name="line #" type="I" value="73"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage6.png"/>
+					<Prp name="object bottom" type="I" value="213"/>
+					<Prp name="object left" type="I" value="330"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;Button&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4462661921"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="line no" type="I" value="73"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 47">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Support Material Selected"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466166435"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="47"/>
+			<Prp name="line no" type="I" value="312"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Aliases.insight.wndTkTopLevel&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Insight - 9mmbullet_1inch&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The 'Insight - 9mmbullet_1inch' window was activated."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4461286574"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="line no" type="I" value="33"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 23">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Printer was set to 900mc"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4464392477"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="23"/>
+			<Prp name="line no" type="I" value="655"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 56">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="----- no model tip loop hit and no support loop -----"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466648148"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="56"/>
+			<Prp name="line no" type="I" value="511"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 65">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Part Slicing Comeplete!!"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4469448148"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="65"/>
+			<Prp name="line no" type="I" value="606"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 40">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="string_to_list was successful!"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465683912"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="40"/>
+			<Prp name="line no" type="I" value="233"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 28">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="237"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="269"/>
+					<Prp name="click point y" type="I" value="278"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 14).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6548405208"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="330"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage20.png"/>
+					<Prp name="object bottom" type="I" value="288"/>
+					<Prp name="object left" type="I" value="144"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (93, 9) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 14).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465081366"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="28"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 60">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="36"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="54"/>
+					<Prp name="click point y" type="I" value="72"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 2).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;Button&quot;, &quot;&quot;, 15)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6551584838"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="54"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage38.png"/>
+					<Prp name="object bottom" type="I" value="90"/>
+					<Prp name="object left" type="I" value="18"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (18, 18) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Insight - 9mmbullet_1inch&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 2).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;Button&quot;, &quot;&quot;, 15)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4468262037"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="60"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 27">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="model_command is '10'"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465062616"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="27"/>
+			<Prp name="line no" type="I" value="252"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 44">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="237"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="319"/>
+					<Prp name="click point y" type="I" value="328"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 10).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6549287847"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="330"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage27.png"/>
+					<Prp name="object bottom" type="I" value="338"/>
+					<Prp name="object left" type="I" value="144"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (93, 9) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 10).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465963542"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="44"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 3">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Printer Selected: 900mc, Material Selected: PPSF"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4461049653"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="line no" type="I" value="69"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 54">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Slice Height Selected"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466648148"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="54"/>
+			<Prp name="line no" type="I" value="344"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 48">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="237"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="419"/>
+					<Prp name="click point y" type="I" value="428"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 6).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6549505671"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="330"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage30.png"/>
+					<Prp name="object bottom" type="I" value="438"/>
+					<Prp name="object left" type="I" value="144"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (93, 9) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 6).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466181944"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="48"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 52">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.654984919"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="185"/>
+					<Prp name="line #" type="I" value="342"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage33.png"/>
+					<Prp name="object bottom" type="I" value="13"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropsliceHeight&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466525116"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="52"/>
+			<Prp name="line no" type="I" value="342"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 63">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Slicing Part Started..."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4469204167"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="63"/>
+			<Prp name="line no" type="I" value="592"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 6">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="904"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="368"/>
+					<Prp name="click point y" type="I" value="386"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild.TkChild.TkChild.TkChild.TkChild.btn"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6544820486"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="922"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage0.png"/>
+					<Prp name="object bottom" type="I" value="404"/>
+					<Prp name="object left" type="I" value="886"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (18, 18) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild.TkChild.TkChild.TkChild.TkChild.btn&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Insight - 9mmbullet_1inch&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 2).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;Button&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4461499074"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 31">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="237"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="269"/>
+					<Prp name="click point y" type="I" value="278"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 14).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6548693866"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="330"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage22.png"/>
+					<Prp name="object bottom" type="I" value="288"/>
+					<Prp name="object left" type="I" value="144"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (93, 9) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 14).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465368519"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="31"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 59">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="36"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="54"/>
+					<Prp name="click point y" type="I" value="72"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 2).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;Button&quot;, &quot;&quot;, 15)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6550540278"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="54"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage37.png"/>
+					<Prp name="object bottom" type="I" value="90"/>
+					<Prp name="object left" type="I" value="18"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (18, 18) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Insight - 9mmbullet_1inch&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 2).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;Button&quot;, &quot;&quot;, 15)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.446721794"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="59"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 64">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="NEW FILE SLICED #1: 9mmbullet_1inch_900mc_PPSF_PPSF-S_T16_T16_10slice"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4469204167"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="64"/>
+			<Prp name="line no" type="I" value="595"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 16">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="904"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="368"/>
+					<Prp name="click point y" type="I" value="386"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild.TkChild.TkChild.TkChild.TkChild.btn"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6546672338"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="922"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage10.png"/>
+					<Prp name="object bottom" type="I" value="404"/>
+					<Prp name="object left" type="I" value="886"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (18, 18) with no key pressed.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild.TkChild.TkChild.TkChild.TkChild.btn&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Insight - 9mmbullet_1inch&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 2).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;Button&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4463350347"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="16"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Got list of materials"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4459975926"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="line no" type="I" value="150"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 11">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6545790046"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="181"/>
+					<Prp name="line #" type="I" value="71"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage5.png"/>
+					<Prp name="object bottom" type="I" value="167"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4462467708"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="line no" type="I" value="71"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 57">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="194"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6549986111"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="330"/>
+					<Prp name="line #" type="I" value="524"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage35.png"/>
+					<Prp name="object bottom" type="I" value="213"/>
+					<Prp name="object left" type="I" value="144"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Tab][Tab][Tab]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466674769"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="57"/>
+			<Prp name="line no" type="I" value="524"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 39">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="string_to_list was successful!"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465683912"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="39"/>
+			<Prp name="line no" type="I" value="233"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 26">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="237"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="194"/>
+					<Prp name="click point y" type="I" value="203"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6548269792"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="330"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage19.png"/>
+					<Prp name="object bottom" type="I" value="213"/>
+					<Prp name="object left" type="I" value="144"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (93, 9) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4464948611"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="26"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 10">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6545716204"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="181"/>
+					<Prp name="line #" type="I" value="70"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage4.png"/>
+					<Prp name="object bottom" type="I" value="167"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Down]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4462396875"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="line no" type="I" value="70"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 42">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6549095949"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="185"/>
+					<Prp name="line #" type="I" value="180"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage26.png"/>
+					<Prp name="object bottom" type="I" value="13"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropsupportMaterial&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465889931"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="42"/>
+			<Prp name="line no" type="I" value="180"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 62">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="0"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.Window(&quot;#32770&quot;, &quot;Save Job&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6552226273"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="436"/>
+					<Prp name="line #" type="I" value="585"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage40.png"/>
+					<Prp name="object bottom" type="I" value="306"/>
+					<Prp name="object left" type="I" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[BS][Right]9mmbullet_1inch_900mc_PPSF_PPSF-S_T16_T16_10slice[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;#32770&quot;, &quot;Save Job&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4469145023"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="62"/>
+			<Prp name="line no" type="I" value="585"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 58">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="524"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.655006956"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="267"/>
+					<Prp name="line #" type="I" value="526"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage36.png"/>
+					<Prp name="object bottom" type="I" value="580"/>
+					<Prp name="object left" type="I" value="109"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466761111"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="58"/>
+			<Prp name="line no" type="I" value="526"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 67">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The test run has stopped because --&lt;/p&gt;&lt;ul&gt;&lt;li&gt;An error message was posted to the log and&lt;/li&gt;&lt;li&gt;The &lt;a href=&quot;aqa-help://6090&quot;&gt;On error&lt;/a&gt; project property is set to &quot;Stop project&quot; or &quot;Stop current item&quot;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;If you don't want the test to stop on errors, set this property (&lt;b&gt;Project Editor &amp;rArr; Properties &amp;rArr; Playback&lt;/b&gt;), to &quot;Continue running&quot; or change your test commands so that they do not post errors to the log automatically. For example, if a window or process was not found, use WaitWindow, WaitProcess or similar methods to get the needed object.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;aqa-help://2207&quot;&gt;Read More&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="message" type="S" value="The test run has stopped because your test project is configured to stop on errors."/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="date" type="D" value="45023.4470317014"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="stack end" type="I" value="2"/>
+			<Prp name="id" type="I" value="67"/>
+			<Prp name="line no" type="I" value="540"/>
+			<Prp name="stack beginning" type="I" value="2"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 51">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="237"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="419"/>
+					<Prp name="click point y" type="I" value="428"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 6).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6549779282"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="330"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage32.png"/>
+					<Prp name="object bottom" type="I" value="438"/>
+					<Prp name="object left" type="I" value="144"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (93, 9) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 6).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466453472"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="51"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 9">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="194"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;Button&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6545638079"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="343"/>
+					<Prp name="line #" type="I" value="69"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage3.png"/>
+					<Prp name="object bottom" type="I" value="213"/>
+					<Prp name="object left" type="I" value="330"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;Button&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4462319097"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="line no" type="I" value="69"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 35">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="get_material_info() was successful!"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465682755"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="35"/>
+			<Prp name="line no" type="I" value="383"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 43">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Reset Support Material"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465948727"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="43"/>
+			<Prp name="line no" type="I" value="181"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 37">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="string_to_list was successful!"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465682755"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="37"/>
+			<Prp name="line no" type="I" value="233"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 29">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6548477083"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="181"/>
+					<Prp name="line #" type="I" value="175"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage21.png"/>
+					<Prp name="object bottom" type="I" value="167"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelMaterial&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465296065"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="29"/>
+			<Prp name="line no" type="I" value="175"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 4">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="USER_PRINTER_SELECTION: 900mc, USER_MATERIAL_SELECTION: PPSF"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4461049884"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="line no" type="I" value="74"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 19">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6547404167"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="181"/>
+					<Prp name="line #" type="I" value="649"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage13.png"/>
+					<Prp name="object bottom" type="I" value="167"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4464080093"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="19"/>
+			<Prp name="line no" type="I" value="649"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 18">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="194"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;Button&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6547325231"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="343"/>
+					<Prp name="line #" type="I" value="648"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage12.png"/>
+					<Prp name="object bottom" type="I" value="213"/>
+					<Prp name="object left" type="I" value="330"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;Button&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.446400706"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="18"/>
+			<Prp name="line no" type="I" value="648"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 36">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="string_to_list was successful!"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465682755"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="36"/>
+			<Prp name="line no" type="I" value="233"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 7">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="134"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="112"/>
+					<Prp name="click point y" type="I" value="122"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 19).Window(&quot;Button&quot;, &quot;&quot;, 3)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6545377546"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="213"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage1.png"/>
+					<Prp name="object bottom" type="I" value="133"/>
+					<Prp name="object left" type="I" value="56"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (78, 10) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 19).Window(&quot;Button&quot;, &quot;&quot;, 3)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4462049884"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="line no" type="I" value="540"/>
+			<Prp name="stacktext" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 38">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="string_to_list was successful!"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465683912"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="38"/>
+			<Prp name="line no" type="I" value="233"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{94B15469-F4BD-45D6-9CCC-C76A18765737}"/>
+			<Prp name="unit 2" type="S" value="{4C321D8F-8119-4F93-ABBC-6D7328D97150}"/>
+			<Prp name="unit 1" type="S" value="{2E6B3B32-DDD1-4701-BBB5-223A8E929765}"/>
+		</Node>
+		<Node name="message 41">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="237"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="319"/>
+					<Prp name="click point y" type="I" value="328"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 10).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.654902419"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="330"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage25.png"/>
+					<Prp name="object bottom" type="I" value="338"/>
+					<Prp name="object left" type="I" value="144"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (93, 9) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 10).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465697917"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="41"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="line no" type="I" value="540"/>
+			<Prp name="stacktext" type="S" value="loop_slicing"/>
+			<Prp name="unit id" type="I" value="0"/>
+		</Node>
+		<Node name="message 61">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="363"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="138"/>
+					<Prp name="click point y" type="I" value="149"/>
+					<Prp name="object name" type="S" value="Aliases.insight.Window(&quot;#32770&quot;, &quot;Insight&quot;, 1).Window(&quot;Button&quot;, &quot;&amp;No&quot;, 2)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.655180544"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="401"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage39.png"/>
+					<Prp name="object bottom" type="I" value="161"/>
+					<Prp name="object left" type="I" value="326"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (37, 11) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;#32770&quot;, &quot;Insight&quot;, 1).Window(&quot;Button&quot;, &quot;&amp;No&quot;, 2)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4468478241"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="61"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 45">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6549362616"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="185"/>
+					<Prp name="line #" type="I" value="309"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage28.png"/>
+					<Prp name="object bottom" type="I" value="13"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropsupportMaterial&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466039699"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="45"/>
+			<Prp name="line no" type="I" value="309"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 46">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6549436111"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="185"/>
+					<Prp name="line #" type="I" value="310"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage29.png"/>
+					<Prp name="object bottom" type="I" value="13"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropsupportMaterial&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466108565"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="46"/>
+			<Prp name="line no" type="I" value="310"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 49">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6549577894"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="185"/>
+					<Prp name="line #" type="I" value="185"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage31.png"/>
+					<Prp name="object bottom" type="I" value="13"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Up][Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropsliceHeight&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466381134"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="49"/>
+			<Prp name="line no" type="I" value="185"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 50">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Reset Slice Height"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466440162"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="50"/>
+			<Prp name="line no" type="I" value="186"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Got list of printers"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.445927662"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="130"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 33">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="1"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6548870139"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="181"/>
+					<Prp name="line #" type="I" value="265"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage24.png"/>
+					<Prp name="object bottom" type="I" value="167"/>
+					<Prp name="object left" type="I" value="1"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelMaterial&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465544213"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="33"/>
+			<Prp name="line no" type="I" value="265"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 22">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="524"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6547645255"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="267"/>
+					<Prp name="line #" type="I" value="653"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage16.png"/>
+					<Prp name="object bottom" type="I" value="580"/>
+					<Prp name="object left" type="I" value="109"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4464333218"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="22"/>
+			<Prp name="line no" type="I" value="653"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 21">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="194"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6547545949"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="330"/>
+					<Prp name="line #" type="I" value="652"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage15.png"/>
+					<Prp name="object bottom" type="I" value="213"/>
+					<Prp name="object left" type="I" value="144"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Tab][Tab][Tab][Tab][Tab][Tab][Tab][Tab]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4464249653"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="21"/>
+			<Prp name="line no" type="I" value="652"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="message 30">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Reset Model Material"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4465353588"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="30"/>
+			<Prp name="line no" type="I" value="176"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="item 1">
+			<Prp name="line no" type="I" value="88"/>
+			<Prp name="stacktext" type="S" value="main"/>
+			<Prp name="unit id" type="I" value="2"/>
+		</Node>
+		<Node name="message 25">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="134"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="112"/>
+					<Prp name="click point y" type="I" value="122"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 19).Window(&quot;Button&quot;, &quot;&quot;, 3)"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.6548197222"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="213"/>
+					<Prp name="line #" type="I" value="147"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage18.png"/>
+					<Prp name="object bottom" type="I" value="133"/>
+					<Prp name="object left" type="I" value="56"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="A click at point (78, 10) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 19).Window(&quot;Button&quot;, &quot;&quot;, 3)"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4464871065"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="25"/>
+			<Prp name="line no" type="I" value="147"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 15">
+			<Node name="visualizer">
+				<Node name="current">
+					<Prp name="click point x" type="I" value="-1"/>
+					<Prp name="storage file name" type="S" value=""/>
+					<Prp name="object top" type="I" value="524"/>
+					<Prp name="click point y" type="I" value="-1"/>
+					<Prp name="object name" type="S" value="Aliases.insight.wndTkTopLevel.TkChild.TkChild"/>
+					<Prp name="need update" type="B" value="0"/>
+					<Prp name="datetime" type="D" value="45023.654646088"/>
+					<Prp name="rect color" type="I" value="255"/>
+					<Prp name="version" type="I" value="2"/>
+					<Prp name="object right" type="I" value="267"/>
+					<Prp name="line #" type="I" value="83"/>
+					<Prp name="signature" type="S" value="{87B03792-E854-4F5D-9F33-165F1F874209}"/>
+					<Prp name="kind" type="I" value="0"/>
+					<Prp name="image file name" type="S" value="visImage9.png"/>
+					<Prp name="object bottom" type="I" value="580"/>
+					<Prp name="object left" type="I" value="109"/>
+				</Node>
+			</Node>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4463148958"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="id" type="I" value="15"/>
+			<Prp name="line no" type="I" value="83"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Node name="message 55">
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="message" type="S" value="----- no model tip loop hit -----"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="45023.4466648148"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="55"/>
+			<Prp name="line no" type="I" value="470"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="priority" type="I" value="300"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+	</Node>
+</Nodes>

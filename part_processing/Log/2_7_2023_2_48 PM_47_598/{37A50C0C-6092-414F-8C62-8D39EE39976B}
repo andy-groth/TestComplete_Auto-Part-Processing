@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="message 38">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="38"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176202894"/>
+		</Node>
+		<Node name="message 17">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="17"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.617486088"/>
+		</Node>
+		<Node name="message 37">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="37"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176139931"/>
+		</Node>
+		<Node name="message 25">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="25"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175373148"/>
+		</Node>
+		<Node name="message 3">
+			<Prp name="line no" type="I" value="90"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="3"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (93, 9) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="date" type="D" value="44964.617367581"/>
+		</Node>
+		<Node name="message 49">
+			<Prp name="line no" type="I" value="63"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="49"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176918634"/>
+		</Node>
+		<Node name="message 14">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="14"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6174672222"/>
+		</Node>
+		<Node name="message 22">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="22"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175179051"/>
+		</Node>
+		<Node name="message 43">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="43"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176522801"/>
+		</Node>
+		<Node name="message 51">
+			<Prp name="line no" type="I" value="102"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Cannot obtain the window with the window class 'TkChild', window caption '' and index 2. See Details for additional information."/>
+			<Prp name="picture" type="S" value="Picture1.png"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="id" type="I" value="51"/>
+			<Prp name="stack beginning" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The window with the specified attributes does not exist.&lt;/p&gt;&lt;p style=&quot;margin-top: 12px;&quot;&gt;&lt;a href=&quot;aqa-help://2203&quot;&gt;Possible causes of the error&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;&lt;br /&gt;Tested object:&lt;br /&gt;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1)"/>
+			<Prp name="stack end" type="I" value="1"/>
+			<Prp name="date" type="D" value="44964.6178315162"/>
+		</Node>
+		<Node name="message 46">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="46"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176718171"/>
+		</Node>
+		<Node name="message 48">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="48"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176845023"/>
+		</Node>
+		<Node name="message 41">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="41"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176393982"/>
+		</Node>
+		<Node name="message 7">
+			<Prp name="line no" type="I" value="55"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="7"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6174020255"/>
+		</Node>
+		<Node name="message 11">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="11"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6174481366"/>
+		</Node>
+		<Node name="message 32">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="32"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175821643"/>
+		</Node>
+		<Node name="message 18">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="18"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6174924653"/>
+		</Node>
+		<Node name="message 19">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="19"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6174986806"/>
+		</Node>
+		<Node name="message 9">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="9"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6174344329"/>
+		</Node>
+		<Node name="message 24">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="24"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175308912"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 27">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="27"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175500579"/>
+		</Node>
+		<Node name="message 29">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="29"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.617563044"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="line no" type="I" value="27"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The 'Insight - 9mmbullet_1inch' window was activated."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="0"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Insight - 9mmbullet_1inch&quot;, 1)"/>
+			<Prp name="date" type="D" value="44964.6172465625"/>
+		</Node>
+		<Node name="message 40">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="40"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176329051"/>
+		</Node>
+		<Node name="child data"/>
+		<Node name="item 1">
+			<Prp name="stacktext" type="S" value="part_processor"/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="line no" type="I" value="69"/>
+		</Node>
+		<Node name="message 8">
+			<Prp name="line no" type="I" value="57"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="8"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;Button&quot;, &quot;&quot;, 1)"/>
+			<Prp name="date" type="D" value="44964.6174268403"/>
+		</Node>
+		<Node name="message 33">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="33"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175885648"/>
+		</Node>
+		<Node name="message 36">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="36"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176076505"/>
+		</Node>
+		<Node name="message 50">
+			<Prp name="line no" type="I" value="65"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Before checkmark"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="50"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="date" type="D" value="44964.6177092014"/>
+		</Node>
+		<Node name="units">
+			<Prp name="unit 0" type="S" value="{94B15469-F4BD-45D6-9CCC-C76A18765737}"/>
+			<Prp name="unit 1" type="S" value="{4C321D8F-8119-4F93-ABBC-6D7328D97150}"/>
+		</Node>
+		<Node name="message 15">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="15"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6174736806"/>
+		</Node>
+		<Node name="message 20">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="20"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175050694"/>
+		</Node>
+		<Node name="message 44">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="44"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176588773"/>
+		</Node>
+		<Node name="message 39">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="39"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176266088"/>
+		</Node>
+		<Node name="message 31">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="31"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175758681"/>
+		</Node>
+		<Node name="item 0">
+			<Prp name="stacktext" type="S" value="configure_modeler"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="102"/>
+		</Node>
+		<Node name="message 16">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="16"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6174799653"/>
+		</Node>
+		<Node name="message 35">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="35"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176014468"/>
+		</Node>
+		<Node name="message 23">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="23"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.617524537"/>
+		</Node>
+		<Node name="message 5">
+			<Prp name="line no" type="I" value="53"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="5"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Down]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6173945255"/>
+		</Node>
+		<Node name="message 47">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="47"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176781597"/>
+		</Node>
+		<Node name="message 12">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="12"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6174544676"/>
+		</Node>
+		<Node name="message 2">
+			<Prp name="line no" type="I" value="90"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="2"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (78, 10) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 19).Window(&quot;Button&quot;, &quot;&quot;, 3)"/>
+			<Prp name="date" type="D" value="44964.6172926968"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="line no" type="I" value="90"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The window was clicked with the left mouse button."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="1"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="A click at point (18, 18) with no key pressed.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Insight - 9mmbullet_1inch&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 2).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;Button&quot;, &quot;&quot;, 1)"/>
+			<Prp name="date" type="D" value="44964.6172724884"/>
+		</Node>
+		<Node name="message 45">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="45"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6176653356"/>
+		</Node>
+		<Node name="message 6">
+			<Prp name="line no" type="I" value="54"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value=""/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="6"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value=""/>
+			<Prp name="date" type="D" value="44964.6174006366"/>
+		</Node>
+		<Node name="item 2">
+			<Prp name="stacktext" type="S" value=""/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="line no" type="I" value="102"/>
+		</Node>
+		<Node name="message 30">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="30"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175694097"/>
+		</Node>
+		<Node name="message 26">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="26"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175435764"/>
+		</Node>
+		<Node name="message 52">
+			<Prp name="line no" type="I" value="102"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="The test run has stopped because your test project is configured to stop on errors."/>
+			<Prp name="picture" type="S" value="Picture2.png"/>
+			<Prp name="unit id" type="I" value="0"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="3"/>
+			<Prp name="as html" type="B" value="-1"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="2"/>
+			<Prp name="id" type="I" value="52"/>
+			<Prp name="stack beginning" type="I" value="2"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="&lt;html&gt;&lt;body&gt;&lt;p&gt;The test run has stopped because --&lt;/p&gt;&lt;ul&gt;&lt;li&gt;An error message was posted to the log and&lt;/li&gt;&lt;li&gt;The &lt;a href=&quot;aqa-help://6090&quot;&gt;On error&lt;/a&gt; project property is set to &quot;Stop project&quot; or &quot;Stop current item&quot;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;If you don't want the test to stop on errors, set this property (&lt;b&gt;Project Editor &amp;rArr; Properties &amp;rArr; Playback&lt;/b&gt;), to &quot;Continue running&quot; or change your test commands so that they do not post errors to the log automatically. For example, if a window or process was not found, use WaitWindow, WaitProcess or similar methods to get the needed object.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;aqa-help://2207&quot;&gt;Read More&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+			<Prp name="stack end" type="I" value="2"/>
+			<Prp name="date" type="D" value="44964.6178359491"/>
+		</Node>
+		<Node name="message 4">
+			<Prp name="line no" type="I" value="52"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="4"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Enter]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;Configure Modeler&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 3).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 18).Window(&quot;Button&quot;, &quot;&quot;, 1)"/>
+			<Prp name="date" type="D" value="44964.6173872917"/>
+		</Node>
+		<Node name="message 28">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="28"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175565393"/>
+		</Node>
+		<Node name="message 21">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="21"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175114699"/>
+		</Node>
+		<Node name="message 42">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="42"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.617645787"/>
+		</Node>
+		<Node name="message 34">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="34"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6175951042"/>
+		</Node>
+		<Node name="message 13">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="13"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6174607986"/>
+		</Node>
+		<Node name="message 10">
+			<Prp name="line no" type="I" value="62"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="message" type="S" value="Keyboard input."/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="unit id" type="I" value="1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="type" type="I" value="1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="id" type="I" value="10"/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="'[Up]' was sent as a keyboard input to the following window or control.&#xA;&#xA;Tested object:&#xA;Aliases.insight.wndTkTopLevel.TkChild.TkChild&#xA;(Sys.Process(&quot;insight&quot;).Window(&quot;TkTopLevel&quot;, &quot;dropmodelerType&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1).Window(&quot;TkChild&quot;, &quot;&quot;, 1))"/>
+			<Prp name="date" type="D" value="44964.6174406134"/>
+		</Node>
+		<Prp name="status" type="I" value="2"/>
+	</Node>
+</Nodes>

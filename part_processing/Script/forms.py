@@ -1,0 +1,386 @@
+﻿"""
+This document is functions relating to the UserForm.
+"""
+import insight
+
+
+user_printer = ""
+user_material = ""
+DOC_PATH = "S:\Dept\RandD\Test Engineering (Software)\TestComplete_Auto-Part-Processing\Full-List.xlsx"
+
+#  ^^ list of printers/materials for each printer are in the xcel doc above ^^
+
+  
+# Name mappings 
+form = UserForms.Processing_Info
+printer_combo_box = form.Printer
+material_combo_box = form.Material
+ok_button = form.okButton
+continue_button = form.ContinueBtn
+
+# UNIVERSAL VARIABLES
+USER_PRINTER_SELECTION = ""
+USER_MATERIAL_SELECTION = ""
+  
+def open_processing_userform():
+  """
+  This is the function that will be called at the begining of the script
+  to open the Processing_Info form and returns the printer selected and materials
+  selected information from it
+  """
+  # setting the universal variables to an empty string incase data has been stored 
+  # in them somehow
+  USER_PRINTER_SELECTION = ""
+  USER_MATERIAL_SELECTION = ""
+  
+  
+  printers = get_printers_from_excel()
+  # populate printer combo box with types of printers
+  
+  for printer in printers:
+    printer_combo_box.Properties.Items.Add(printer)
+
+  while True:
+    # boxes that shouldn't be accessable are disabled and ones that can
+    # be interacted with are Enabled, incase the user loops back
+    material_combo_box.Enabled = False
+    ok_button.Enabled = False
+    continue_button.Enabled = True
+    
+    
+    # display the form and wait for user selection
+    form.ShowModal()
+    
+    # get user's printer selection
+    selected_printer_index = printer_combo_box.ItemIndex
+    if selected_printer_index == -1:
+      Log.Message("Please select a printer.")
+    else:      
+      selected_printer = str(printer_combo_box.Text)
+      # get materials for selected printer and return the user selection
+      user_material = select_materials(selected_printer)
+    
+      # If we are getting False back here, that means there was a mismatch 
+      # on the printer/materials type, so we can to go through the process 
+      # again on having the user selecting a printer and Materials
+      if user_material == False:
+        continue
+      else: 
+        # log the user's selections and break loop
+        Log.Message(f"Printer Selected: {selected_printer}, Material Selected: {user_material}")
+        # setting the global variables for printer and material so they can be gotten
+        # in the future by other code
+        USER_PRINTER_SELECTION = selected_printer
+        USER_MATERIAL_SELECTION = user_material
+        Log.Message(f"USER_PRINTER_SELECTION: {USER_PRINTER_SELECTION}, USER_MATERIAL_SELECTION: {USER_MATERIAL_SELECTION}")
+        return USER_PRINTER_SELECTION, USER_MATERIAL_SELECTION
+        
+  
+# helper
+def select_materials(selected_printer):
+  """
+  This function is one that uses the Userform, and returns the string that the user
+  selects. if the user selects a different printer while going through the materials
+  this also checks to make sure that the combination is valid before continuing.
+  """
+  # getting the list of materials from the sleceted printer
+  materials = get_materials_from_excel(selected_printer)
+  
+  # clear existing materials and add materials for printer in UserForm
+  material_combo_box.Properties.Items.Clear()
+  material_combo_box.Properties.Items.Add("ALL")
+  for material in materials:
+    material_combo_box.Properties.Items.Add(material)
+  
+  
+  form.ShowModal()
+  
+  # get user's material selection
+  selected_material_index = material_combo_box.ItemIndex
+  if selected_material_index == -1:
+    Log.Message("Please select a material.")
+  else:
+    selected_material = str(material_combo_box.Text)
+  
+  # checking if the printer name is the same since the materials populated
+  # and if it's not, restarting the process
+  if selected_printer == str(printer_combo_box.Text):
+    return selected_material
+    
+  return False 
+  
+def get_printers_from_excel():
+  """
+  This function opens the excel doc and gets all the values from excel that are supported
+  ie. ones without x's
+  """
+  printer_list = []
+  #change this and value of 0 to look for proper column name
+  column = 1
+  
+  # open the sheet
+  excel_doc = set_excel_sheet("Printers")
+  excel_doc.First()
+  
+  while not excel_doc.EOF():
+    if aqConvert.VarToStr(excel_doc.Value[column]) is not "x":
+      printer_list += [aqConvert.VarToStr(excel_doc.Value[0])]
+    excel_doc.Next()
+  
+  DDT.CloseDriver(excel_doc.Name)
+  Log.Message("Got list of printers")
+  return printer_list
+  
+    
+def get_materials_from_excel(printer_name: str):
+  """
+  This function opens the excel doc and gets all the values from excel that are supported
+  ie. ones without x's
+  """
+  material_list = []
+  
+  # open the sheet
+  excel_doc = set_excel_sheet(printer_name)
+  excel_doc.First()
+  
+  while not excel_doc.EOF():
+    material_list += [aqConvert.VarToStr(excel_doc.Value[0])]
+    excel_doc.Next()
+  
+  DDT.CloseDriver(excel_doc.Name)
+  Log.Message("Got list of materials")
+  return material_list
+ 
+  
+  
+       
+def continue_form(Sender):
+  """
+  # This was created for the continue button to allow the form to "refresh" from the onClick 
+  # property from the continue button on the user form.
+  # We will be reshowing the modal with the improved interface
+  """
+  form.Hide()
+  
+  # Activate the combo boxes that can be changed now
+  # Hide the continue button since we don't need it now
+  material_combo_box.Enabled = True
+  ok_button.Enabled = True
+  continue_button.Enabled = False
+  pass
+  
+
+# helper
+def set_excel_sheet(sheet:str):
+  """
+  This function takes a string input of the name of the sheet to find
+  and returns the DDT command for the excel driver
+  """
+  return DDT.ExcelDriver(DOC_PATH, sheet, True)
+  
+ 
+
+  
+def new_testing():
+  excel_doc = set_excel_sheet("900mc")
+  excel_doc.First()  
+  material_type = "ASA"
+  row_count = 0
+  while row_count < excel_doc.ColumnCount:
+    if excel_doc.ColumnName[row_count] == "Material":
+      material_column     = row_count
+      row_count += 1
+      break
+    row_count += 1
+      
+    
+  Log.Message(f"row_count is {row_count}")
+  DDT.CloseDriver(excel_doc.Name)
+  
+
+
+    
+    
+def string_to_list(string_to_split: str):
+  """
+  This function will take the string output from the get_material_info that is brought
+  over from the excel doc and convert it into a list to be iterated through while 
+  processing parts
+  """
+  full_list = []
+  # the | in the data is the separation of the support material and '%' is for
+  # the third layer (currently only same slice different model tip)
+  
+  if "%" in string_to_split:
+    split_list = string_to_split.split("|")
+    
+    for list_item in split_list:
+      parts = list_item.split("%")
+    
+      first = [str(part) for part in parts[0].split(',')]
+      second = [str(part) for part in parts[1].split(',')]
+      full_list.append([first, str(second[0]), str(second[1])])
+    
+    
+  elif "|" in string_to_split:    
+    full_list = [[str(part) for part in item.split(',')] for item in string_to_split.split("|")]
+
+    
+    
+  # there is no seperation and only commas
+  else:
+    full_list = [string_to_split.split(",")]
+  
+  Log.Message("string_to_list was successful!")
+  # this is a nested list so to get the individual strings you need to call 'nested_list[0][0]'
+  return full_list
+    
+  
+  
+
+class Navigation():
+  """
+  this class and methods will be used to figure out the move the printer needs to
+  make based on the data from the excel doc
+  """
+  number_to_move_row = 0
+  number_to_move_column = 0
+  
+  
+  def move_for_printer(printer_name: str):
+    """
+    This function will return the number of presses down needed to find the printer that 
+    we need the automation to do
+    """
+    # open the sheet
+    excel_doc = set_excel_sheet("Printers")
+    excel_doc.First()
+    
+    column = 0
+    number_to_move_down = 0
+    #find which column the printer names are in, on the excel doc
+    while column < excel_doc.ColumnCount:
+          if not aqConvert.VarToStr(excel_doc.ColumnName[column]) == "Printer Name/Gender":
+            column += 1
+          break
+    
+    # finding how far down 
+    while not excel_doc.EOF():
+      if aqConvert.VarToStr(excel_doc.Value[column]) == printer_name:
+        break
+      excel_doc.Next()
+      number_to_move_down += 1 
+      
+    #close the sheet 
+    DDT.CloseDriver(excel_doc.Name)
+    
+    # return how many times the automation has to click
+    return number_to_move_down
+    
+    
+    
+    
+  def move_for_material(printer_type: str, material_to_find: str):
+    """
+    printer_type - so that we know which excel sheet to go to since they are listed as printer names
+    material_to_find - which material to find
+    """
+    # open the sheet
+    excel_doc = set_excel_sheet(printer_type)
+    excel_doc.First()
+    
+    column = 0
+    number_to_move_down = 0
+    #find where the material is in the list
+    while column < excel_doc.ColumnCount:
+      if not aqConvert.VarToStr(excel_doc.ColumnName[column]) == "Model Material":
+        column += 1
+      break
+    
+      
+    while not excel_doc.EOF():
+      if aqConvert.VarToStr(excel_doc.Value[column]) == material_to_find:
+        break
+      excel_doc.Next()
+      number_to_move_down += 1 
+    
+    #close the sheet 
+    DDT.CloseDriver(excel_doc.Name)
+    
+    # return how many times the automation has to click
+    return number_to_move_down
+    
+    
+    
+    
+  def get_material_info(selected_printer:str, selected_material:str):
+    printer_type = selected_printer
+    material_type = selected_material
+    column_count = 0
+    row_count = 0
+    material_column = 0
+    support_name_column = 0
+    slice_height_column = 0
+    model_tip_column = 0
+    support_tip_column = 0
+    tabs_column = 0
+    
+    excel_doc = set_excel_sheet(printer_type)
+    excel_doc.First()
+    
+    # this while loop, is to find what columns are where. This should never change,
+    #  but incase the excel document is changed in the future, this will protect the code. 
+    # The name strings that are being compared are the names of the columns in row 1
+    #   of the excel doc
+    while row_count < excel_doc.ColumnCount:
+      if aqConvert.VarToStr(excel_doc.ColumnName[row_count])   == "Model Material":
+        material_column     = row_count
+        row_count += 1
+        
+      elif aqConvert.VarToStr(excel_doc.ColumnName[row_count]) == "Support Material":
+        support_name_column = row_count
+        row_count += 1  
+        
+      elif aqConvert.VarToStr(excel_doc.ColumnName[row_count]) == "Slice Height":
+        slice_height_column  = row_count
+        row_count += 1
+        
+      elif aqConvert.VarToStr(excel_doc.ColumnName[row_count]) == "Model Tip":
+        model_tip_column    = row_count
+        row_count += 1
+        
+      elif aqConvert.VarToStr(excel_doc.ColumnName[row_count]) == "Support Tip":
+        support_tip_column  = row_count
+        row_count += 1
+        
+      elif aqConvert.VarToStr(excel_doc.ColumnName[row_count]) == "Tabs to Continue":
+        tabs_column         = row_count
+        row_count += 1
+        
+      else:
+        row_count += 1
+        continue
+        
+    
+    # find the row down in the doc where the material is listed
+    while not excel_doc.EOF():
+      if aqConvert.VarToStr(excel_doc.Value[material_column]) == selected_material:
+        break
+      excel_doc.Next()
+      column_count += 1  
+    
+    
+    # this area is assigning all the values of the material row to the correct variable
+    support_name_list  = aqConvert.VarToStr(excel_doc.Value[support_name_column])
+    slice_height_list  = aqConvert.VarToStr(excel_doc.Value[slice_height_column])
+    model_tip_list     = aqConvert.VarToStr(excel_doc.Value[model_tip_column])
+    support_tip_list   = aqConvert.VarToStr(excel_doc.Value[support_tip_column])
+    tabs_to_continue   = aqConvert.VarToStr(excel_doc.Value[tabs_column])
+    
+    
+    # close the excel doc
+    DDT.CloseDriver(excel_doc.Name)
+    
+    Log.Message("get_material_info() was successful!")
+    #returns 5 values
+    return support_name_list, slice_height_list, model_tip_list, support_tip_list, tabs_to_continue;
