@@ -4,6 +4,10 @@ helpful functions
 
 """
 import forms
+import os
+import re
+import fnmatch
+
 log = Log.Message
 
 ########      Global Variables        #########
@@ -21,8 +25,7 @@ PRINTER_RANGE = 40
 # Project name of the repo
 PROJECT_NAME = "Part Processing"
 PROJECT_PATH = "C:\Automation\Part_Processing"
-SHAREDRIVE_PATH = "S:\Dept\RandD\Test Engineering (Software)\TestComplete - Auto Part Processing\Current"
-
+PART_SHAREDRIVE_PATH = "S:\\Dept\\RandD\\Test Engineering (Software)\\TestComplete_Auto-Part-Processing\\Parts\\"
 
 ########      START OF FUNCTIONS       #########  
 
@@ -31,11 +34,11 @@ def insight_to_front():
   """
   This function is a mask to make understanding the code easier
   """
-  return Sys.Process("insight").Window("TkTopLevel", "*", 1).Activate()
+  return Sys.Process("insight").Window("TkTopLevel", "*",1).Activate()
 
   
 # A mask for TestComplete's delay function.
-def wait(time: int):
+def wait(time: int = ONE_SECOND):
 	aqUtils.Delay(time)
 
 	
@@ -50,20 +53,21 @@ def pre_processing():
   # focus insight for start of the script
   insight_to_front()
   wait(ONE_SECOND)
-  
-  # navigating into the configure modeler 
-  click(insight.configure_modeler())
-  wait(ONE_SECOND)
 
+  # navigating into the configure modeler 
+  insight.open_configure_modeler() 
+  wait(ONE_SECOND)
   
-  #insight_to_front()
-  Looping_Functions.configure_modeler_checking() 
-  
+  #click(Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 3).Window("TkChild", "", 1).Window("TkChild", "", 14).Window("TkChild", "", 1))
   # setting modeler type availability
   click(config_mod_screen.modeler_type_availability())
-  insight_to_front()
+  wait(ONE_SECOND)
+  
+  #Log.Message("Check 4")
+  #click(Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 2).Window("TkChild", "", 1).Window("TkChild", "", 3).Window("TkChild", "", 1).Window("TkChild", "", 18).Window("TkChild", "", 1))
   click(config_mod_screen.modeler_type())
   wait(ONE_SECOND)
+  #Log.Message("Check 5")
   
   # this next chunk is added to 'clear' the model/support material in case the printer is 
   # configured to 900mc
@@ -120,38 +124,36 @@ def yes_or_no_dialog(yes_or_no_expected: bool, question: str) -> bool:
 	expected = dialog_button_values["Yes"] if yes_or_no_expected else dialog_button_values["No"]
 	return expected == BuiltIn.MessageDlg(question, mtConfirmation, MkSet(mbYes, mbNo), 0)
 	
-			
-	
-def click(ui_element):
-	"""
-	Generic function to click a UI element with a one second delay.
-	Args:
-	ui_element (TestComplete Element): The element to click.
-
-	Returns:
-	Nothing
-	"""
-
-	wait_ui_timeout = FIVE_MINUTES
-	is_visible = ui_element.WaitProperty("VisibleOnScreen", "True", wait_ui_timeout)
-
-	if not is_visible:
-		question = "The automation is attempting to click a UI element." + \
-				   "However, it is not enabled or not visible on screen." \
-				   "Continue waiting and try again? "
-		if yes_or_no_dialog(True, question):
-			ui_element.click()
-
-		else:
-			error = "Cannot click(): Element not enabled or visible."
-			Log.error(error)
-	ui_element.click()		
 		
 	
-	
+def click(ui_element):
+    """
+    Generic function to click a UI element with a one-second delay.
+    Args:
+    ui_element (TestComplete Element): The element to click.
 
-  	
-	
+    Returns:
+    bool: True if the click was successful, False otherwise.
+    """
+
+    wait_ui_timeout = FIVE_MINUTES
+    is_visible = ui_element.WaitProperty("VisibleOnScreen", "True", wait_ui_timeout)
+
+    if not is_visible:
+        question = "The automation is attempting to click a UI element." + \
+                   "However, it is not enabled or not visible on screen." \
+                   "Continue waiting and try again? "
+        if yes_or_no_dialog(True, question):
+            ui_element.Click()
+            return True
+        else:
+            error = "Cannot click(): Element not enabled or visible."
+            Log.error(error)
+            return False
+
+    ui_element.Click()
+    return True
+
   
   
 ### LOOPING FUNCTIONS 
@@ -161,6 +163,7 @@ class Looping_Functions():
   tip, slice etc. This will also be for naming the parts and resetting insight 
   positions
   """
+  
   
   def reset_pos(what_to_reset:str):
     """
@@ -243,8 +246,8 @@ class Looping_Functions():
     
     ### Starting Slicing Process ###
     # Open modeler window
-    click(insight.configure_modeler())
-    Looping_Functions.configure_modeler_checking() 
+    open_configure_modeler()
+    #Looping_Functions.configure_modeler_checking() 
     
     click(config_mod_screen.modeler_type_availability())
     click(config_mod_screen.modeler_type())
@@ -271,11 +274,11 @@ class Looping_Functions():
     # Getting info strings for the selected material
     support_list_str, slice_list_str, model_tip_list_str, support_tip_list_str, tab_list_str = forms.Navigation.get_material_info(printer_type, model_material)
     
-    # Log.Message(f"support_list_str is {support_list_str}")
-    # Log.Message(f"slice_list_str is {slice_list_str}")
-    # Log.Message(f"model_tip_list_str is {model_tip_list_str}")
-    # Log.Message(f"support_tip_list_str is {support_tip_list_str}")
-    # Log.Message(f"tab_list_str is {tab_list_str}")
+    Log.Message(f"support_list_str is {support_list_str}")
+    Log.Message(f"slice_list_str is {slice_list_str}")
+    Log.Message(f"model_tip_list_str is {model_tip_list_str}")
+    Log.Message(f"support_tip_list_str is {support_tip_list_str}")
+    Log.Message(f"tab_list_str is {tab_list_str}")
     
     # Turning the strings into lists to go through
     support_list     = forms.string_to_list(support_list_str)
@@ -439,29 +442,29 @@ class Looping_Functions():
               #Log.Message(f"savefile_support_tip is '{savefile_support_tip}'")
 
 
-            ### Tab Commands ###
-            #Log.Message(f"model loop tab +++++")
+            ### Tab Commands else ###
+            #Log.Message(f"Tab no material------")
             tab_number = tab_list[support_command_used][slice_command_used]
-            tab_number = int(tab_number)
+            tab_number = int(tab_number[0])
             #Log.Message(f"tab_number is '{tab_number}'")
-            
+          
             config_mod_screen.modeler_type().Keys("[Tab]" * tab_number)
             #log(f"tab down")
             Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Keys("[Enter]")
             #log(f"press ok")
-
+          
+            # Changing the config will delete existing slices
             if Sys.Process("insight").WaitChild('Window("#32770", "Warning", 1)', 3000).Exists:
               click(insight.warning_window_yes())
-
-
-            ### Slice Part ###
-            total_number_sliced = Looping_Functions.slice_part_helper(total_number_sliced, save_file_printer, savefile_model_name, savefile_support_name, savefile_model_tip, savefile_support_tip, savefile_slice_height, part_name)
-            #Log.Message(f"Slicing Part Started...")
             
+            
+            ### Slice Part ###
+            #logging and slicing helper function
+            total_number_sliced = Looping_Functions.slice_part_helper(total_number_sliced, save_file_printer, savefile_model_name, savefile_support_name, savefile_model_tip, savefile_support_tip, savefile_slice_height, part_name)
+          
             # open modeler window
-            click(insight.configure_modeler())
-            Looping_Functions.configure_modeler_checking() 
-            #Log.Message(f"open config mod")
+            open_configure_modeler()
+            #Looping_Functions.configure_modeler_checking() 
         
             
         # there is nothing for the model_tip to select
@@ -532,15 +535,13 @@ class Looping_Functions():
           if Sys.Process("insight").WaitChild('Window("#32770", "Warning", 1)', 3000).Exists:
             click(insight.warning_window_yes())
             
-            
           ### Slice Part ###
           #logging and slicing helper function
           total_number_sliced = Looping_Functions.slice_part_helper(total_number_sliced, save_file_printer, savefile_model_name, savefile_support_name, savefile_model_tip, savefile_support_tip, savefile_slice_height, part_name)
           
-          
           # open modeler window
-          click(insight.configure_modeler())
-          Looping_Functions.configure_modeler_checking() 
+          open_configure_modeler()
+          #Looping_Functions.configure_modeler_checking() 
           
           
           
@@ -550,14 +551,16 @@ class Looping_Functions():
     click(config_mod_screen.slice_height())
     config_mod_screen.slice_height_dropdown().Keys("[Down]"*slice_command)
     config_mod_screen.slice_height_dropdown().Keys("[Enter]")
-    config_mod_screen.modeler_type().Keys("[Tab]" * tab_number)
+    config_mod_screen.modeler_type().Keys("[Tab]" * 3)
     
     # closing the configure modeler    
     Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Keys("[Enter]")
     wait(ONE_SECOND)
     # continue past warning if it's there
-    if Sys.Process("insight").WaitChild('Window("#32770", "Warning", 1)', 3000).Exists:
+    if Sys.Process("insight").WaitChild('Window("#32770", "Warning", 1)', 3000).Exists: 
       click(warning_window_yes()) 
+    if Sys.Process("insight").WaitChild('Window("#32770", "Part Build Style Warning", 1)', 3000).Exists:
+      click(Sys.Process("insight").Window("#32770", "Part Build Style Warning", 1).Window("Button", "OK", 1))
     log("All Slicing complete! Program finished.")
     
     #returns the tab number so we can safely exit out of the config modeler  
@@ -569,37 +572,26 @@ class Looping_Functions():
   def slice_part_helper(total_number_sliced, save_file_printer, savefile_model_name, 
     savefile_support_name, savefile_model_tip, savefile_support_tip, savefile_slice_height, savefile_part_name):
     
+    # The script was going to fast and insight was "reloading" and it would error out here if we didn't wait
+    if savefile_model_name == "Addigy-PA6" or savefile_model_name == "Antero-800NA":
+      wait(1000)
+    wait(2000)
+    
+    folder_to_find = aqFileSystem.FindFolders(PART_SHAREDRIVE_PATH, "ssys_" + savefile_part_name)
+    folder_to_create = PART_SHAREDRIVE_PATH + "ssys_" + savefile_part_name + "\\"
+    # checking if there are any folders already created
+    if folder_to_find == None:
+      if aqFileSystem.CreateFolder(folder_to_create) == 0:
+        #create a garbage file just so it's populated (not sure if this matters or not)
+        aqFile.Create(folder_to_create + "test.txt")
+      else:
+        Log.Message("Couldnt create folder "+ folder_to_create)
+    else:
+      Log.Message("Folder found in search.")
+    
     # Start Slicing Process
     click(insight.green_flag())
-     
-    # checking to see if the overwrite window pops up or if this is the first item to be sliced
-    if not Sys.Process("insight").WaitChild('Window("#32770", "Insight", 1)', 3000).Exists:
-      # if not, slices the part and then again so that we can get the naming conventions started
-      while Sys.Process("insight").WaitChild('Window("TkTopLevel", "Processing Model", 1)', 1000).Exists:
-        wait(ONE_SECOND)
-      click(configure_modeler())
-      
-      # This is the workaround for a resliced item to create a CMB by changing the paths
-      click(config_mod_screen.slice_height())
-      config_mod_screen.slice_height_dropdown().Keys("[Down]")
-      config_mod_screen.slice_height_dropdown().Keys("[Enter]")
-      config_mod_screen.modeler_type().Keys("[Tab]" * 3)
-      Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Keys("[Enter]")
-      
-      if Sys.Process("insight").WaitChild('Window("#32770", "Warning", 1)', 2000).Exists:
-        click(insight.warning_window_yes())
-      
-      # re setting the slice height to what it should be
-      click(configure_modeler())    
-      click(config_mod_screen.slice_height())
-      config_mod_screen.slice_height_dropdown().Keys("[Up]"*5)
-      config_mod_screen.slice_height_dropdown().Keys("[Enter]")
-      config_mod_screen.modeler_type().Keys("[Tab]" * 3)  
-      Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Keys("[Enter]")
-      
-      click(green_flag())
 
-    
      
     wait(ONE_SECOND)
     while Sys.Process("insight").WaitChild('Window("#32770", "Insight", 1)', 3000).Exists:
@@ -626,41 +618,16 @@ class Looping_Functions():
     
     log("Part Slicing Comeplete!!")
     return total_number_sliced + 1
-  
 
-    
-    
-  def configure_modeler_checking():
-    """
-    
-    """
-    flag = False
-    
-            
-    # checking model material dropdown
-    if Sys.Process("insight").WaitChild('Window("TkTopLevel", "dropdownMaterial", 1)', 1500).Exists:
-      log("material drop")
-      Sys.Process("insight").Window("TkTopLevel", "dropdownMaterial", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Keys("[Enter]")
-      #flag = True
-      
-    # checking slice height
-    if Sys.Process("insight").WaitChild('Window("TkTopLevel", "dropsliceHeight", 1)', 1500).Exists:
-      log("slice drop")
-      Sys.Process("insight").Window("TkTopLevel", "dropsliceHeight", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Keys("[Enter]")
-      #flag = True
-      
-    if flag == True:
-      click(insight.configure_modeler())
-      log("open?")
-        
-    return
       
     
   def get_printer_move(printer:str):
     return forms.Navigation.move_for_printer(printer)
     
+    
   def get_model_move(printer:str, model_material:str):
     return forms.Navigation.move_for_material(printer, model_material)
+    
     
   def set_printer(printer_name: str):
     printer_number = Looping_Functions.get_printer_move(printer_name)
@@ -710,7 +677,7 @@ class Looping_Functions():
     return number_down
     
     
-    
+      
   # takes 6 strings
   def type_file_save_info(save_file_printer: str, savefile_model_name: str, 
     savefile_support_name: str, savefile_model_tip: str, 
@@ -724,7 +691,35 @@ class Looping_Functions():
     + savefile_model_tip + "_" + savefile_support_tip + "_" 
     + savefile_slice_height +"slice")
   
+    
+    
+  def open_up_stl(stl_name:str, stl_path:str):
+    insight.insight_to_front()
   
+    #brings up the file menu
+    Open_Files.insight_app().Keys("~f")
+    wait()
+    Open_Files.insight_app().Keys("o")
+    wait()
+    
+    click(Open_Files.filename_box())
+    Open_Files.filename_box().Keys(stl_path + stl_name + "[Enter]")
+    
+ 
+              
+      
+  def get_stl_files_info(folder_path):
+    stl_files = [f for f in os.listdir(folder_path) if f.lower().endswith('.stl')]
+    count = len(stl_files)
+    return count, stl_files
+  
+    
+    
+  def remove_numbers_and_extension(filename):
+    no_extension = os.path.splitext(filename)[0]
+    no_numbers = re.sub(r'^\d+', '', no_extension)
+    return no_numbers  
+    
 ########      END OF FUNCTIONS       #########    
   
   
@@ -736,19 +731,17 @@ class Looping_Functions():
 
 def configure_modeler():
   return Sys.Process("insight").Window("TkTopLevel", "*",).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("TkChild", "", 2).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("Button", "", 1)
- 
-  
-def green_flag():
-  return Sys.Process("insight").Window("TkTopLevel", "*",).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("TkChild", "", 2).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("TkChild", "", 2).Window("Button", "", 5)
 
-def green_flag2():
-  return Sys.Process("insight").Window("TkTopLevel", "*", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("TkChild", "", 2).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("TkChild", "", 2).Window("Button", "", 5)
-  
+def open_configure_modeler(): 
+  return configure_modeler().Keys("[Enter]")
+
+def green_flag():
+  return Sys.Process("insight").Window("TkTopLevel", "*",).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("TkChild", "", 2).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("TkChild", "", 2).Window("Button", "", 5)  
+
 def overwrite_box():
   return Sys.Process("insight").Window("TkTopLevel", "*", 1) \
   .Window("TkChild", "", 1).Window("TkChild", "", 2).Window("TkChild", "", 3) \
   .Window("TkChild", "", 1).Window("TkChild", "", 1).Window("Button", "", 15)
-  
 
 def insight_window():
   return Sys.Process("insight").Window("#32770", "Insight", 1)
@@ -765,27 +758,52 @@ def warning_window_yes():
 def warning_window_no():
   return Sys.Process("insight").Window("#32770", "Warning", 1).Window("Button", "&No", 2)
 
+  
+  
+  
+# class of functions for when we are trying to open the stl
+class Open_Files():
+  def insight_app():
+    return Sys.Process("insight").Window("TkTopLevel", "*",1)
+    
+  def open_filepath_box():
+    return Sys.Process("insight").Window("#32770", "Open File", 1).Window("WorkerW", "", 1).Window("ReBarWindow32", "", 1).Window("Address Band Root", "", 1).Window("msctls_progress32", "", 1).Window("Breadcrumb Parent", "", 1).Window("ToolbarWindow32", "*", 1)
+    
+  def open_filepath():
+    return Sys.Process("insight").Window("#32770", "Open File", 1).Window("WorkerW", "", 1).Window("ReBarWindow32", "", 1).Window("Address Band Root", "", 1).Window("msctls_progress32", "", 1).Window("ComboBoxEx32", "", 1).Window("ComboBox", "", 1)
+     
+  def window():
+    return Sys.Process("insight").Window("#32770", "Open File", 1)
+
+  def up_folder_arrow():
+    return Sys.Process("insight").Window("#32770", "Open File", 1).Window("WorkerW", "", 1).Window("ReBarWindow32", "", 1).Window("UpBand", "", 1).Window("ToolbarWindow32", "Up band toolbar", 1)
+  
+  def size_column():
+    return Sys.Process("insight").Window("#32770", "Open File", 1).Window("DUIViewWndClassName", "", 1).UIAObject("Explorer_Pane").Window("CtrlNotifySink", "", 3).Window("SHELLDLL_DefView", "ShellView", 1).UIAObject("Items_View").UIAObject("Header").UIAObject("Size")
+    
+  def open_button():
+    return Sys.Process("insight").Window("#32770", "Open File", 1).Window("Button", "&Open", 1)
+    
+  def filename_box():
+    return Sys.Process("insight").Window("#32770", "Open File", 1).Window("ComboBoxEx32", "", 1).Window("ComboBox", "", 1).Window("Edit", "", 1)
+    
+        
 # class for buttons when trying to overwrite saves 
 class overwrite():  
   def overwrite_box_yes():
     return Sys.Process("insight").Window("#32770", "Insight", 1).Window("Button", "&Yes", 1)
-  
-  
+    
   def overwrite_box_no():
     return Sys.Process("insight").Window("#32770", "Insight", 1).Window("Button", "&No", 2)
-
-
+    
   def save_in_box():
     return Sys.Process("insight").Window("#32770", "Save Job", 1).Window("ComboBox", "", 1)
-  
   
   def job_name_box():  
     return Sys.Process("insight").Window("#32770", "Save Job", 1).Window("ComboBoxEx32", "", 1).Window("ComboBox", "", 1).Window("Edit", "", 1)
   
-
   def save_button():
     return Sys.Process("insight").Window("#32770", "Save Job", 1).Window("Button", "&Save", 2)
-  
   
   def cancel_button():
     return Sys.Process("insight").Window("#32770", "Save Job", 1).Window("Button", "Cancel", 3)  
@@ -796,7 +814,7 @@ class overwrite():
      
 # abreviated path for configure modeler buttons / clicking
 def conf_mod_path():
-  return Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 3).Window("TkChild", "", 1)
+  return Sys.Process("insight").Window("TkTopLevel", "Configure Modeler",).Window("TkChild", "", 1).Window("TkChild", "", 3).Window("TkChild", "", 1)
 
 # configure modeler side screen 
 class config_mod_screen():
@@ -824,7 +842,6 @@ class config_mod_screen():
     return NameMapping.Sys.Process("insight").Window("TkTopLevel", "dropmodelerType", 1).Window("TkChild", "", 1).Window("ScrollBar", "", 1)  
   
   
-    
   # model material selection
   def model_material():
     return conf_mod_path().Window("TkChild", "", 14).Window("TkChild", "", 1)
@@ -836,14 +853,11 @@ class config_mod_screen():
   # model material dropdown menu
   def model_material_dropdown():
     return Sys.Process("insight").Window("TkTopLevel", "dropmodelMaterial", 1).Window("TkChild", "", 1).Window("TkChild", "", 1)
-  
-    
-    
+     
     
   # model material color selection
   def model_material_color():
     return conf_mod_path().Window("TkChild", "", 12).Window("TkChild", "", 1)
-  
     
     
   # support material selection
@@ -858,9 +872,7 @@ class config_mod_screen():
   def support_material_dropdown():
     return Sys.Process("insight").Window("TkTopLevel", "dropsupportMaterial", 1).Window("TkChild", "", 1).Window("TkChild", "", 1)
     
-    
-    
-    
+        
   # slice height selection
   def slice_height():
     return conf_mod_path().Window("TkChild", "", 6).Window("TkChild", "", 1)  
@@ -872,8 +884,6 @@ class config_mod_screen():
   # slice height dropdown menu
   def slice_height_dropdown():
     return Sys.Process("insight").Window("TkTopLevel", "dropsliceHeight", 1).Window("TkChild", "", 1).Window("TkChild", "", 1)
-    
-    
     
     
   # model tip selection  
@@ -888,7 +898,6 @@ class config_mod_screen():
       
     
     
-    
   # support tip selection  
   def support_tip():
     return conf_mod_path().Window("TkChild", "", 2).Window("TkChild", "", 1)    
@@ -901,7 +910,6 @@ class config_mod_screen():
      #return conf_mod_path()
       
       
- 
      
   # check button to accept
   def check_button():

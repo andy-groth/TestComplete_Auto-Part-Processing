@@ -12,7 +12,7 @@
 	</testItems>
 	<variables key="{EFB790E9-DBA7-4D8F-8D8B-176132CFA546}" />
 	<settings key="{2788E94E-E1FE-498D-B7CA-D2BB139B67AC}">
-		<settingsVersion value="15.48" />
+		<settingsVersion value="15.51" />
 		<setting name="AgOpenApp_ExtendedSilverlightObjectTree" type="1" value="False" />
 		<setting name="ApplicationHangingProcessFilterMode" type="6" rowIndex="4" colIndex="0">
 			<columns>
@@ -43,6 +43,8 @@
 		<setting name="BitBar_APIURL" type="5" value="https://cloud.bitbar.com/api/" />
 		<setting name="BitBar_FindAndroidDevice" type="5" value="( Device Group As in Selected Device )" />
 		<setting name="BitBar_FindIOSDevice" type="5" value="( Device Group As in Selected Device )" />
+		<setting name="BitBar_FRAMEWORKID_Android" type="2" value="0" />
+		<setting name="BitBar_FRAMEWORKID_IOS" type="2" value="0" />
 		<setting name="BitBar_HUBURL" type="5" value="https://appium.bitbar.com/wd/hub/" />
 		<setting name="BitBar_NewCommandTimeout" type="2" value="300" />
 		<setting name="CBT_AppsAvailability" type="6" rowIndex="0" colIndex="0">
@@ -225,7 +227,7 @@
 			</data>
 		</setting>
 		<setting name="OpenApps_HybridMobile_AccessPolicy" type="1" value="False" />
-		<setting name="OpenApps_HybridMobile_DynamicIdentifiers" type="6" rowIndex="37" colIndex="9">
+		<setting name="OpenApps_HybridMobile_DynamicIdentifiers" type="6" rowIndex="37" colIndex="4">
 			<columns>
 				<column type="2" enabled="True" />
 				<column type="2" enabled="True" />
@@ -375,7 +377,7 @@
 			</data>
 		</setting>
 		<setting name="OpenApps_Web_EnableSupportForWebComponents" type="1" value="True" />
-		<setting name="OpenApps_Web_ObjIdentification_DynamicIdentifiers" type="6" rowIndex="37" colIndex="9">
+		<setting name="OpenApps_Web_ObjIdentification_DynamicIdentifiers" type="6" rowIndex="37" colIndex="4">
 			<columns>
 				<column type="2" enabled="True" />
 				<column type="2" enabled="True" />
@@ -638,7 +640,7 @@
 		<setting name="Visualizer_DeleteAll" type="1" value="True" />
 		<setting name="Visualizer_ParallelPlaybackCapture" type="1" value="False" />
 		<setting name="Visualizer_PlaybackCaptureProperties" type="1" value="False" />
-		<setting name="Visualizer_PlaybackCollectMode" type="6" rowIndex="1" colIndex="0">
+		<setting name="Visualizer_PlaybackCollectMode" type="6" rowIndex="0" colIndex="0">
 			<columns>
 				<column type="5" enabled="True" />
 			</columns>

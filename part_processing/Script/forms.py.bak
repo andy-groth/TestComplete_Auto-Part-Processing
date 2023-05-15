@@ -7,7 +7,8 @@ import insight
 user_printer = ""
 user_material = ""
 DOC_PATH = "S:\Dept\RandD\Test Engineering (Software)\TestComplete_Auto-Part-Processing\Full-List.xlsx"
-
+DEFAULT_DIRECTORY = "S:\Dept\RandD\Test Engineering (Software)\TestComplete_Auto-Part-Processing\Parts"
+DIRECTORY_NOT_CLICKED = "Default Path:   S:\Dept\RandD\Test Engineering (Software)\TestComplete_Auto-Part-Processing\Parts"
 #  ^^ list of printers/materials for each printer are in the xcel doc above ^^
 
   
@@ -17,11 +18,14 @@ printer_combo_box = form.Printer
 material_combo_box = form.Material
 ok_button = form.okButton
 continue_button = form.ContinueBtn
+open_folder = form.Open_File_Button
 
 # UNIVERSAL VARIABLES
 USER_PRINTER_SELECTION = ""
 USER_MATERIAL_SELECTION = ""
+DIRECTORY_FOLDER = ""
   
+
 def open_processing_userform():
   """
   This is the function that will be called at the begining of the script
@@ -32,7 +36,7 @@ def open_processing_userform():
   # in them somehow
   USER_PRINTER_SELECTION = ""
   USER_MATERIAL_SELECTION = ""
-  
+  DIRECTORY_FOLDER = ""
   
   printers = get_printers_from_excel()
   # populate printer combo box with types of printers
@@ -45,8 +49,7 @@ def open_processing_userform():
     # be interacted with are Enabled, incase the user loops back
     material_combo_box.Enabled = False
     ok_button.Enabled = False
-    continue_button.Enabled = True
-    
+    continue_button.Enabled = True     
     
     # display the form and wait for user selection
     form.ShowModal()
@@ -59,7 +62,7 @@ def open_processing_userform():
       selected_printer = str(printer_combo_box.Text)
       # get materials for selected printer and return the user selection
       user_material = select_materials(selected_printer)
-    
+      
       # If we are getting False back here, that means there was a mismatch 
       # on the printer/materials type, so we can to go through the process 
       # again on having the user selecting a printer and Materials
@@ -70,10 +73,16 @@ def open_processing_userform():
         Log.Message(f"Printer Selected: {selected_printer}, Material Selected: {user_material}")
         # setting the global variables for printer and material so they can be gotten
         # in the future by other code
+        Log.Message(f"form.Panel1.Caption is '{form.Panel1.Caption}'")
+        if form.Panel1.Caption == DIRECTORY_NOT_CLICKED:
+          form.Panel1.Caption = DEFAULT_DIRECTORY
+          
         USER_PRINTER_SELECTION = selected_printer
         USER_MATERIAL_SELECTION = user_material
-        Log.Message(f"USER_PRINTER_SELECTION: {USER_PRINTER_SELECTION}, USER_MATERIAL_SELECTION: {USER_MATERIAL_SELECTION}")
-        return USER_PRINTER_SELECTION, USER_MATERIAL_SELECTION
+        DIRECTORY_FOLDER = form.Panel1.Caption
+        
+        Log.Message(f"USER_PRINTER_SELECTION: {USER_PRINTER_SELECTION}, USER_MATERIAL_SELECTION,: {USER_MATERIAL_SELECTION}, DIRECTORY_FOLDER {DIRECTORY_FOLDER}")
+        return USER_PRINTER_SELECTION, USER_MATERIAL_SELECTION, DIRECTORY_FOLDER
         
   
 # helper
@@ -170,6 +179,12 @@ def continue_form(Sender):
   pass
   
 
+def get_directory(Sender):
+  open_folder.Execute()
+  form.Panel1.Caption = open_folder.Directory
+  
+  
+
 # helper
 def set_excel_sheet(sheet:str):
   """
@@ -178,24 +193,6 @@ def set_excel_sheet(sheet:str):
   """
   return DDT.ExcelDriver(DOC_PATH, sheet, True)
   
- 
-
-  
-def new_testing():
-  excel_doc = set_excel_sheet("900mc")
-  excel_doc.First()  
-  material_type = "ASA"
-  row_count = 0
-  while row_count < excel_doc.ColumnCount:
-    if excel_doc.ColumnName[row_count] == "Material":
-      material_column     = row_count
-      row_count += 1
-      break
-    row_count += 1
-      
-    
-  Log.Message(f"row_count is {row_count}")
-  DDT.CloseDriver(excel_doc.Name)
   
 
 
@@ -211,31 +208,42 @@ def string_to_list(string_to_split: str):
   # the | in the data is the separation of the support material and '%' is for
   # the third layer (currently only same slice different model tip)
   
-  if "%" in string_to_split:
-    split_list = string_to_split.split("|")
-    
-    for list_item in split_list:
-      parts = list_item.split("%")
-    
-      first = [str(part) for part in parts[0].split(',')]
-      second = [str(part) for part in parts[1].split(',')]
-      full_list.append([first, str(second[0]), str(second[1])])
-    
-    
-  elif "|" in string_to_split:    
-    full_list = [[str(part) for part in item.split(',')] for item in string_to_split.split("|")]
+  if "|" in string_to_split:
+        full_list = []
+        split_list = string_to_split.split("|")
+        for item in split_list:
+            nested_list = []
+            parts = item.split(',')
 
+            for part in parts:
+                if "%" in part:
+                    nested_list.append([str(x) for x in part.split('%')])
+                else:
+                    nested_list.append(str(part))
+
+            full_list.append(nested_list)
     
     
   # there is no seperation and only commas
   else:
-    full_list = string_to_split.split(",")
+    full_list = [string_to_split.split(",")]
   
   Log.Message("string_to_list was successful!")
   # this is a nested list so to get the individual strings you need to call 'nested_list[0][0]'
   return full_list
+
+      
+# helper
+def filepath_button_click(Sender):
+  # Open a folder selection dialog
+  selected_folder = BuiltIn.BrowseForFolder("S:\Dept\RandD\Test Engineering (Software)\TestComplete_Auto-Part-Processing\Parts\\")
     
-  
+  # Check if a folder was selected
+  if len(selected_folder) > 0:
+    # Assign the selected path to the Label control
+    UserForms.Processing_Info.Folder_Button.Text = selected_folder
+  else:
+    Log.Message("No folder was selected.") 
   
 
 class Navigation():
