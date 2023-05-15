@@ -9,7 +9,7 @@ user_material = ""
 DOC_PATH = "S:\Dept\RandD\Test Engineering (Software)\TestComplete_Auto-Part-Processing\Full-List.xlsx"
 DEFAULT_DIRECTORY = "S:\Dept\RandD\Test Engineering (Software)\TestComplete_Auto-Part-Processing\Parts"
 DIRECTORY_NOT_CLICKED = "Default Path:   S:\Dept\RandD\Test Engineering (Software)\TestComplete_Auto-Part-Processing\Parts"
-#  ^^ list of printers/materials for each printer are in the xcel doc above ^^
+#  ^^ list of printers/materials for each printer are in the xcel doc above "DOC_PATH" ^^
 
   
 # Name mappings 
@@ -73,13 +73,12 @@ def open_processing_userform():
         Log.Message(f"Printer Selected: {selected_printer}, Material Selected: {user_material}")
         # setting the global variables for printer and material so they can be gotten
         # in the future by other code
-        Log.Message(f"form.Panel1.Caption is '{form.Panel1.Caption}'")
         if form.Panel1.Caption == DIRECTORY_NOT_CLICKED:
           form.Panel1.Caption = DEFAULT_DIRECTORY
           
         USER_PRINTER_SELECTION = selected_printer
         USER_MATERIAL_SELECTION = user_material
-        DIRECTORY_FOLDER = form.Panel1.Caption
+        DIRECTORY_FOLDER = form.Panel1.Caption + "\\"
         
         Log.Message(f"USER_PRINTER_SELECTION: {USER_PRINTER_SELECTION}, USER_MATERIAL_SELECTION,: {USER_MATERIAL_SELECTION}, DIRECTORY_FOLDER {DIRECTORY_FOLDER}")
         return USER_PRINTER_SELECTION, USER_MATERIAL_SELECTION, DIRECTORY_FOLDER
@@ -107,7 +106,7 @@ def select_materials(selected_printer):
   # get user's material selection
   selected_material_index = material_combo_box.ItemIndex
   if selected_material_index == -1:
-    Log.Message("Please select a material.")
+    BuiltIn.ShowMessage("Please select a material.")
   else:
     selected_material = str(material_combo_box.Text)
   
@@ -117,6 +116,8 @@ def select_materials(selected_printer):
     return selected_material
     
   return False 
+  
+  
   
 def get_printers_from_excel():
   """
@@ -140,6 +141,8 @@ def get_printers_from_excel():
   Log.Message("Got list of printers")
   return printer_list
   
+  
+  
     
 def get_materials_from_excel(printer_name: str):
   """
@@ -160,40 +163,14 @@ def get_materials_from_excel(printer_name: str):
   Log.Message("Got list of materials")
   return material_list
  
-  
-  
-       
-def continue_form(Sender):
-  """
-  # This was created for the continue button to allow the form to "refresh" from the onClick 
-  # property from the continue button on the user form.
-  # We will be reshowing the modal with the improved interface
-  """
-  form.Hide()
-  
-  # Activate the combo boxes that can be changed now
-  # Hide the continue button since we don't need it now
-  material_combo_box.Enabled = True
-  ok_button.Enabled = True
-  continue_button.Enabled = False
-  pass
-  
+    
 
-def get_directory(Sender):
-  open_folder.Execute()
-  form.Panel1.Caption = open_folder.Directory
-  
-  
-
-# helper
 def set_excel_sheet(sheet:str):
   """
   This function takes a string input of the name of the sheet to find
   and returns the DDT command for the excel driver
   """
   return DDT.ExcelDriver(DOC_PATH, sheet, True)
-  
-  
 
 
     
@@ -233,7 +210,30 @@ def string_to_list(string_to_split: str):
   return full_list
 
       
-# helper
+  
+  
+# The functions that take (Sender) are for when the user interacts with the UserForm by clicking 
+def continue_form(Sender):
+  """
+  # This was created for the continue button to allow the form to "refresh" from the onClick 
+  # property from the continue button on the user form.
+  # We will be reshowing the modal with the improved interface
+  """
+  form.Hide()
+  
+  # Activate the combo boxes that can be changed now
+  # Hide the continue button since we don't need it now
+  material_combo_box.Enabled = True
+  ok_button.Enabled = True
+  continue_button.Enabled = False
+  pass
+  
+
+def get_directory(Sender):
+  open_folder.Execute()
+  form.Panel1.Caption = open_folder.Directory
+  
+
 def filepath_button_click(Sender):
   # Open a folder selection dialog
   selected_folder = BuiltIn.BrowseForFolder("S:\Dept\RandD\Test Engineering (Software)\TestComplete_Auto-Part-Processing\Parts\\")
@@ -243,9 +243,11 @@ def filepath_button_click(Sender):
     # Assign the selected path to the Label control
     UserForms.Processing_Info.Folder_Button.Text = selected_folder
   else:
-    Log.Message("No folder was selected.") 
+    Log.Message("No folder was selected.")
+    
   
 
+    
 class Navigation():
   """
   this class and methods will be used to figure out the move the printer needs to

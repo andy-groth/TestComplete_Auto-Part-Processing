@@ -60,7 +60,8 @@ def pre_processing():
   
   #click(Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 3).Window("TkChild", "", 1).Window("TkChild", "", 14).Window("TkChild", "", 1))
   # setting modeler type availability
-  #click(config_mod_screen.modeler_type_availability())
+  click(config_mod_screen.modeler_type_availability())
+  wait(ONE_SECOND)
   
   #Log.Message("Check 4")
   #click(Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 2).Window("TkChild", "", 1).Window("TkChild", "", 3).Window("TkChild", "", 1).Window("TkChild", "", 18).Window("TkChild", "", 1))

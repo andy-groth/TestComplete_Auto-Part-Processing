@@ -13,7 +13,6 @@ import os
 import re
 
 click = insight.click
-log = Log.Message
 
 # These variables will be saved as the User selects from the dropdown menu 
 #   on the form
@@ -32,7 +31,7 @@ def main():
   #   slice from the form
   insight.insight_to_front()
   USER_SYSTEM, USER_MATERIALS, DIRECTORY = forms.open_processing_userform()
-  #Log.Message(f"DIRECTORY is {DIRECTORY}")
+  
   folder_path = DIRECTORY
     
   # A message to the User so that they understand what must be done before the scrip starts
@@ -56,7 +55,6 @@ def main():
     
         
     ### Starting ###
-    Log.Message("Starting")
     # Getting the name of the part we are slicing
     part_from_insight = Sys.Process("insight").Window("TkTopLevel", "*", 1).WndCaption
     PART_NAME = part_from_insight[10:]
@@ -66,10 +64,8 @@ def main():
   
 
     ### Printer Selection ###
-    Log.Message("Printer Selection")
     # Navigating to the 'Configure Modeler'
     insight.open_configure_modeler()
-    #insight.Looping_Functions.configure_modeler_checking() 
     insight.wait()
   
     # Setting the printer type
@@ -77,7 +73,6 @@ def main():
   
   
     ### Material Selection ###
-    Log.Message("Material Selection")
     # Checking to see what material the user selected for 
     if USER_MATERIALS == "ALL":
       # The list of materials/tips is located in the 'Full-List' excel doc in the same folder

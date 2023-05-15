@@ -19,7 +19,7 @@ ONE_MINUTE = 60 * ONE_SECOND
 FIVE_MINUTES = 5 * ONE_MINUTE
 TEN_MINUTES = 10 * ONE_MINUTE
 
-# this variable is one that represents the max number of printers
+# This variable is one that represents the max number of printers
 PRINTER_RANGE = 40
 
 # Project name of the repo
@@ -29,7 +29,7 @@ PART_SHAREDRIVE_PATH = "S:\\Dept\\RandD\\Test Engineering (Software)\\TestComple
 
 ########      START OF FUNCTIONS       #########  
 
-# a mask for TestCompletes Activate function for easier 
+# A mask for TestCompletes Activate function for easier 
 def insight_to_front():
   """
   This function is a mask to make understanding the code easier
@@ -50,40 +50,34 @@ def pre_processing():
   is being ran.
   """
   
-  # focus insight for start of the script
+  # Focus insight for start of the script
   insight_to_front()
   wait(ONE_SECOND)
 
-  # navigating into the configure modeler 
+  # Navigating into the configure modeler 
   insight.open_configure_modeler() 
   wait(ONE_SECOND)
-  
-  #click(Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 3).Window("TkChild", "", 1).Window("TkChild", "", 14).Window("TkChild", "", 1))
-  # setting modeler type availability
   click(config_mod_screen.modeler_type_availability())
   wait(ONE_SECOND)
-  
-  #Log.Message("Check 4")
-  #click(Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 2).Window("TkChild", "", 1).Window("TkChild", "", 3).Window("TkChild", "", 1).Window("TkChild", "", 18).Window("TkChild", "", 1))
   click(config_mod_screen.modeler_type())
   wait(ONE_SECOND)
-  #Log.Message("Check 5")
   
-  # this next chunk is added to 'clear' the model/support material in case the printer is 
-  # configured to 900mc
+  # This next chunk is added to 'clear' the model/support material in case the printer is 
+  #  configured to 900mc
   config_mod_screen.modeler_type_button().Keys("[Enter]")
   config_mod_screen.modeler_dropdown().Keys("[Down]")
   config_mod_screen.modeler_dropdown().Keys("[Enter]")
   wait(ONE_SECOND)
   config_mod_screen.modeler_type_button().Keys("[Enter]")
   
-  # this loop brings the printer gender back to the top (40 is an arbitrary number that will probably 
-  # not be exceeded in the close future and doesn't add much time to the test)
+  # This loop brings the printer gender back to the top (PRINTER_RANGE = 40 and is 
+  #  an arbitrary number that will probably not be exceeded in the close future 
+  #  and doesn't add much time to the test)
   config_mod_screen.modeler_dropdown().Keys("[Up]"*PRINTER_RANGE + "[Enter]")
   wait(ONE_SECOND)
   
-  # tabbing down from the system type to the check button and clicking 
-  # the parent button (the child button was "disapearing" causing issues
+  # Tabbing down from the system type to the check button and clicking 
+  #  the parent button (the child button was "disapearing" causing issues)
   config_mod_screen.modeler_type().Keys("[Tab][Tab][Tab][Tab][Tab][Tab][Tab][Tab]")
   Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Keys("[Enter]")
   wait(ONE_SECOND)
@@ -91,7 +85,7 @@ def pre_processing():
   
   
   
-#####    Testing Helper Functions
+#####    Testing Helper Functions    #####
 def assertion(condition: bool, condition_message: str):
 	"""
 	Function to assert a general condition and logs it as an assertion step.
@@ -247,15 +241,13 @@ class Looping_Functions():
     ### Starting Slicing Process ###
     # Open modeler window
     open_configure_modeler()
-    #Looping_Functions.configure_modeler_checking() 
     
     click(config_mod_screen.modeler_type_availability())
     click(config_mod_screen.modeler_type())
    
-    
     # Getting model command to select the specific material
     model_command = Looping_Functions.get_model_move(printer_type, model_material)
-    #Log.Message(f"model_command is '{model_command}'")
+
     
     ### Select Model Material ###
     # Find model material from dropdown 
@@ -282,15 +274,10 @@ class Looping_Functions():
     
     # Turning the strings into lists to go through
     support_list     = forms.string_to_list(support_list_str)
-    #log("support list to string.")
     slice_list       = forms.string_to_list(slice_list_str)
-    #log("slice list to string.")
     model_tip_list   = forms.string_to_list(model_tip_list_str)
-    #log("model tip list to string.")
     support_tip_list = forms.string_to_list(support_tip_list_str)
-    #log("support tip list to string.")
     tab_list         = forms.string_to_list(tab_list_str)  
-    #log("tab list to string.")
     
     ## counter for testing/debugging
     total_number_sliced = 1
@@ -299,43 +286,30 @@ class Looping_Functions():
     # set support command
     support_command = 0
     
-    for support_material in support_list:
-      #Log.Message(f"##### Select Support Material #####")
-      #Log.Message(f"support_material is '{support_material}'") 
-        
-      # this is to keep the variable known for future assigning of variables
+    for support_material in support_list:     
+      # This is to keep the variable known for future assigning of variables
       support_command_used = support_command
       
-      #reset support material
+      # Reset support material
       Looping_Functions.reset_pos("support")
       
-      #select support material
+      # Select support material
       click(config_mod_screen.support_material())
       config_mod_screen.support_material_dropdown().Keys("[Down]"*support_command)
       config_mod_screen.support_material_dropdown().Keys("[Enter]")
         
-      log("Support Material Selected")  
-      # set support name for save file
+      # Set support name for save file
       savefile_support_name = support_list[support_command][0]
-      #debug
-      #Log.Message(f"savefile_support_name is '{savefile_support_name}'")
-      
-      # incrament the command incase there are more
+    
+      # Incrament the command incase there are more
       support_command += 1
-      
-      #Log.Message(f"support_command is {support_command}")
-      #Log.Message(f"support_command_used is {support_command_used}")
-      
-      
+  
+         
       ### Slice Height ###
       slice_command = 0
       
       # Set slice height command
       for slice_item in slice_list[support_command_used]:
-        #Log.Message(f"##### Slice Tip Loop #####")
-        #Log.Message(f"slice_item is '{slice_item}'")
-          
-          
         # This is to keep the variable known for future assigning of variables
         slice_command_used = slice_command
         
@@ -350,8 +324,6 @@ class Looping_Functions():
         
         # Set slice height for save file
         savefile_slice_height = slice_list[support_command_used][slice_command]
-        #debug
-        #Log.Message(f"savefile_slice_height is '{savefile_slice_height}'")
         
         #incrament the slice command
         slice_command += 1
@@ -362,96 +334,64 @@ class Looping_Functions():
         # set support command
         model_tip_command = 0
         support_tip_command = 0
-        #Log.Message(f"model_tip_list is {model_tip_list}")
-        #Log.Message(f"model_tip_list[{slice_command_used}] is {model_tip_list[support_command_used]}")
-        #Log.Message(f"model_tip_list[{support_command_used}][{slice_command_used}] is {model_tip_list[support_command_used][slice_command_used]}")
-        
-        # this is checking to see if the item within the model_tip_list is a nested list
-        #   aka needs to be looped through
+        # This is checking to see if the item within the model_tip_list is a nested list
+        #  aka needs to be looped through
         if isinstance(model_tip_list[support_command_used][slice_command_used], list) is True:
 
           for model_tip_item in model_tip_list[support_command_used][model_tip_command]:
-            #Log.Message(f"##### Model Tip Loop #####")
-            #Log.Message(f"model_tip_item is {model_tip_item}")
-
-            # this is to keep the variable known for future assigning of variables
+            # This is to keep the variable known for future assigning of variables
             model_tip_command_used = model_tip_command
-            #Log.Message(f"model_tip_command is {model_tip_command}")
-            #Log.Message(f"model_tip_command_used is {model_tip_command_used}")
 
-            # reset model_tip
+            # Reset model_tip
             Looping_Functions.reset_pos("model_tip")
             
-            # select model_tip
+            # Select model_tip
             click(config_mod_screen.model_tip())
             config_mod_screen.model_tip().Keys("[Enter]")
             config_mod_screen.model_tip_dropdown().Keys("[Down]"*model_tip_command)
             config_mod_screen.model_tip_dropdown().Keys("[Enter]")
             
-            log("Model Tip Selected")
-            
-            # set slice height for save file
+            # Set slice height for save file
             savefile_model_tip = model_tip_item
-            #debug
-            #Log.Message(f"model_tip_list is {model_tip_list[model_tip_command_used]}")
-            #Log.Message(f"savefile_model_tip is '{savefile_model_tip}'")
             
-            #incrament the model tip command
+            # Incrament the model tip command
             model_tip_command += 1
 
             
             ### Support Tip ###
-            #Log.Message(f"support_tip_list[{support_command_used}][{slice_command_used}] is {support_tip_list[support_command_used][slice_command_used]}")
             if isinstance(support_tip_list[support_command_used][slice_command_used], list) is True:
 
               for support_tip_item in support_tip_list[support_command_used][support_tip_command]:
-                #Log.Message(f"+++++ MODEL TIP LOOP AND SUPPORT TIP LOOP HIT +++++")
-                #Log.Message(f" support_tip_item is {support_tip_item}")
-                #Log.Message(f"support_tip_list[{support_command_used}][{slice_command_used}] is {support_tip_list[support_command_used][slice_command_used]}")
-                
-                # this is to keep the variable known for future assigning of variables
+               
+                # This is to keep the variable known for future assigning of variables
                 support_tip_command_used = support_tip_command
 
-                #debug
-                #Log.Message(f"support_tip_item[0] is {support_tip_item[0]}")
-            
-            
-                # reset support_tip
+                # Reset support_tip
                 Looping_Functions.reset_pos("support_tip")
             
-                # select support_tip
+                # Select support_tip
                 click(config_mod_screen.support_tip())
                 config_mod_screen.support_tip_dropdown().Keys("[Down]"*support_tip_command)
                 config_mod_screen.support_tip_dropdown().Keys("[Enter]")
               
-                log("Support Tip Selected")
-                # set support tip name for save file
+                # Set support tip name for save file
                 savefile_support_tip = support_tip_item
 
-                #debug
-                #Log.Message(f"+++++ savefile_support_tip is '{savefile_support_tip}'")
-                #incrament the support tip command
+                # Incrament the support tip command
                 support_tip_command += 1
               
               
             # there is a choice for MATERIAL_TIP but no choice for SUPPORT_TIP
             else:
-              #Log.Message(f"+++++ MODEL TIP LOOP HIT AND no support tip loop -----")
               savefile_support_tip = support_tip_list[support_command_used][slice_command_used]
-              #debug
-              #Log.Message(f"savefile_support_tip is '{savefile_support_tip}'")
 
 
             ### Tab Commands else ###
-            #Log.Message(f"Tab no material------")
             tab_number = tab_list[support_command_used][slice_command_used]
             tab_number = int(tab_number[0])
-            #Log.Message(f"tab_number is '{tab_number}'")
           
             config_mod_screen.modeler_type().Keys("[Tab]" * tab_number)
-            #log(f"tab down")
             Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Keys("[Enter]")
-            #log(f"press ok")
           
             # Changing the config will delete existing slices
             if Sys.Process("insight").WaitChild('Window("#32770", "Warning", 1)', 3000).Exists:
@@ -459,23 +399,18 @@ class Looping_Functions():
             
             
             ### Slice Part ###
-            #logging and slicing helper function
+            # Logging and slicing helper function
             total_number_sliced = Looping_Functions.slice_part_helper(total_number_sliced, save_file_printer, savefile_model_name, savefile_support_name, savefile_model_tip, savefile_support_tip, savefile_slice_height, part_name)
           
             # open modeler window
             open_configure_modeler()
-            #Looping_Functions.configure_modeler_checking() 
+
         
             
-        # there is nothing for the model_tip to select
+        # If there is nothing for the model_tip to select
         else:
-          # set model tip for save file
+          # Set model tip for save file
           savefile_model_tip = model_tip_list[support_command_used][slice_command_used]
-          #debug
-          #Log.Message(f"----- no model tip loop hit -----")
-          #Log.Message(f"model_tip_list[{support_command_used}][{slice_command_used}] is model_tip_list[{support_command_used}][{slice_command_used}]")
-          #Log.Message(f"savefile_model_tip is '{savefile_model_tip}'")
-
         
           ### Support Tip else ###
           support_tip_command = 0
@@ -483,69 +418,50 @@ class Looping_Functions():
           if isinstance(support_tip_list[support_command_used][slice_command_used], list) is True:
 
             for support_tip_item in support_tip_list[support_command_used][support_tip_command]:
-              #Log.Message(f"+++++ MODEL TIP LOOP AND SUPPORT TIP LOOP HIT +++++")
-              #Log.Message(f" support_tip_item is {support_tip_item}")
-              #Log.Message(f"support_tip_list[{support_command_used}][{slice_command_used}] is {support_tip_list[support_command_used][slice_command_used]}")
-              
-              # this is to keep the variable known for future assigning of variables
+              # This is to keep the variable known for future assigning of variables
               support_tip_command_used = support_tip_command
 
-              #debug
-              #Log.Message(f"support_tip_item[0] is {support_tip_item[0]}")
-          
-          
-              # reset support_tip
+              # Reset support_tip
               Looping_Functions.reset_pos("support_tip")
           
-              # select support_tip
+              # Select support_tip
               click(config_mod_screen.support_tip())
               config_mod_screen.support_tip_dropdown().Keys("[Down]"*support_tip_command)
               config_mod_screen.support_tip_dropdown().Keys("[Enter]")
             
-              log("Support Tip Selected")
-              # set support tip name for save file
+              # Set support tip name for save file
               savefile_support_tip = support_tip_item
-              #debug
-              #Log.Message(f"+++++ savefile_support_tip is '{savefile_support_tip}'")
+
               #incrament the support tip command
               support_tip_command += 1
             
               
-          #there is no choice for support tip
+          # If there is no choice for support tip
           else:
-            #Log.Message(f"----- no model tip loop hit and no support loop -----")
             savefile_support_tip = support_tip_list[support_command_used][slice_command_used]
-            #debug
-            #Log.Message(f"support_tip_list[support_command_used][slice_command_used] is support_tip_list[{support_command_used}][{slice_command_used}]")
-            #Log.Message(f"savefile_support_tip is '{savefile_support_tip}'")
-              
+            
             
           ### Tab Commands else ###
-          #Log.Message(f"Tab no material------")
           tab_number = tab_list[support_command_used][slice_command_used]
           tab_number = int(tab_number[0])
-          #Log.Message(f"tab_number is '{tab_number}'")
           
           config_mod_screen.modeler_type().Keys("[Tab]" * tab_number)
-          #log(f"tab down")
           Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Keys("[Enter]")
-          #log(f"press ok")
           
           # Changing the config will delete existing slices
           if Sys.Process("insight").WaitChild('Window("#32770", "Warning", 1)', 3000).Exists:
             click(insight.warning_window_yes())
             
+            
           ### Slice Part ###
-          #logging and slicing helper function
+          # Logging and slicing helper function
           total_number_sliced = Looping_Functions.slice_part_helper(total_number_sliced, save_file_printer, savefile_model_name, savefile_support_name, savefile_model_tip, savefile_support_tip, savefile_slice_height, part_name)
           
-          # open modeler window
+          # Open modeler window
           open_configure_modeler()
-          #Looping_Functions.configure_modeler_checking() 
           
           
-          
-    log("end of function")
+
      
     # Added this to the end of each pass through so we know exactly where we are 
     click(config_mod_screen.slice_height())
@@ -553,15 +469,16 @@ class Looping_Functions():
     config_mod_screen.slice_height_dropdown().Keys("[Enter]")
     config_mod_screen.modeler_type().Keys("[Tab]" * 3)
     
-    # closing the configure modeler    
+    # Closing the configure modeler    
     Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Keys("[Enter]")
     wait(ONE_SECOND)
-    # continue past warning if it's there
+    
+    # Continue past warning if it's there
     if Sys.Process("insight").WaitChild('Window("#32770", "Warning", 1)', 3000).Exists: 
       click(warning_window_yes()) 
     if Sys.Process("insight").WaitChild('Window("#32770", "Part Build Style Warning", 1)', 3000).Exists:
       click(Sys.Process("insight").Window("#32770", "Part Build Style Warning", 1).Window("Button", "OK", 1))
-    log("All Slicing complete! Program finished.")
+    log("All Slicing for the .stl is complete!")
     
     #returns the tab number so we can safely exit out of the config modeler  
     return tab_number
@@ -579,10 +496,15 @@ class Looping_Functions():
     
     folder_to_find = aqFileSystem.FindFolders(PART_SHAREDRIVE_PATH, "ssys_" + savefile_part_name)
     folder_to_create = PART_SHAREDRIVE_PATH + "ssys_" + savefile_part_name + "\\"
-    # checking if there are any folders already created
+    
+    # Checking if there are any folders already created
     if folder_to_find == None:
+      # This will create a folder with the same name as the first file that we are going to
+      #  slice so that we don't need to rename it or slice it twice to rename the file
+      #  to our specifications (ie. stl-name_model_supprot_m-tip_s-tip_sliceheight
       if aqFileSystem.CreateFolder(folder_to_create) == 0:
-        #create a garbage file just so it's populated (not sure if this matters or not)
+        
+        # Create a garbage file just so it's populated (not sure if this matters or not)
         aqFile.Create(folder_to_create + "test.txt")
       else:
         Log.Message("Couldnt create folder "+ folder_to_create)
@@ -597,7 +519,7 @@ class Looping_Functions():
     while Sys.Process("insight").WaitChild('Window("#32770", "Insight", 1)', 3000).Exists:
       click(overwrite.overwrite_box_no())
 
-    #typing out the new file path
+    # Typing out the new file path
     insight.save_job_window().Keys("[BS][Right]" + savefile_part_name + "_" + save_file_printer +
     "_" + savefile_model_name + "_" + savefile_support_name + "_" + savefile_model_tip + "_" +
     savefile_support_tip + "_" + savefile_slice_height +"slice[Enter]")
@@ -630,9 +552,11 @@ class Looping_Functions():
     
     
   def set_printer(printer_name: str):
+    """
+    This function sets the printer type for the user
+    """
     printer_number = Looping_Functions.get_printer_move(printer_name)
     
-    #insight_to_front()
     click(config_mod_screen.modeler_type())
     
     config_mod_screen.modeler_type_button().Keys("[Enter]")
@@ -656,8 +580,8 @@ class Looping_Functions():
     slice_command = move_helper(slices, slice_name)
     model_tip_command = move_helper(model_tips, model_tip_name)
     support_tip_command = move_helper(support_tips, support_tip_name)
-    # since tabs are based on the position of slice in the list, we can use that 
-    # as the same position
+    # Since tabs are based on the position of slice in the list, we can use that 
+    #  as the same position
     tab_command = int(tabs[slice_command])
     
     return support_command, slice_command, model_tip_command, support_tip_command, tab_command
@@ -666,7 +590,7 @@ class Looping_Functions():
     
   def move_helper(list, item:str):
     """
-    this is a helper function for get_move_commands(), that will take a list and 
+    This is a helper function for get_move_commands(), that will take a list and 
     the name of the item in that list and loop through to find out how far down
     the list needs to go.
     """
@@ -696,7 +620,7 @@ class Looping_Functions():
   def open_up_stl(stl_name:str, stl_path:str):
     insight.insight_to_front()
   
-    #brings up the file menu
+    # Brings up the file menu
     Open_Files.insight_app().Keys("~f")
     wait()
     Open_Files.insight_app().Keys("o")
@@ -709,6 +633,10 @@ class Looping_Functions():
               
       
   def get_stl_files_info(folder_path):
+    """
+    This function goes into the file thatthe user selected from the UserForm and 
+    get the number of .stl files and returns them in a list, as well as the number of stl's
+    """
     stl_files = [f for f in os.listdir(folder_path) if f.lower().endswith('.stl')]
     count = len(stl_files)
     return count, stl_files
@@ -716,6 +644,9 @@ class Looping_Functions():
     
     
   def remove_numbers_and_extension(filename):
+    """
+    This function removed the numbers before the part
+    """
     no_extension = os.path.splitext(filename)[0]
     no_numbers = re.sub(r'^\d+', '', no_extension)
     return no_numbers  
@@ -812,81 +743,80 @@ class overwrite():
 
      
      
-# abreviated path for configure modeler buttons / clicking
+# Abreviated path for configure modeler buttons / clicking
 def conf_mod_path():
   return Sys.Process("insight").Window("TkTopLevel", "Configure Modeler",).Window("TkChild", "", 1).Window("TkChild", "", 3).Window("TkChild", "", 1)
 
-# configure modeler side screen 
+# Configure modeler side screen 
 class config_mod_screen():
 
-  # radio button All Stratasys modeler types
+  # Radio button All Stratasys modeler types
   def modeler_type_availability():
     return conf_mod_path().Window("TkChild", "", 19).Window("Button", "", 3)
   
   
-  # modeler type selection (aka printer gender)
+  # Modeler type selection (aka printer gender)
   def modeler_type():
     return conf_mod_path().Window("TkChild", "", 18).Window("TkChild", "", 1)  
   
-  # drop down button on right side of 'modeler type'
+  # Drop down button on right side of 'modeler type'
   def modeler_type_button():
     return conf_mod_path().Window("TkChild", "", 18).Window("Button", "", 1)
   
-  # the dropdown menu used for our navigation purposes
-  # this was not able to be gotten from the object spy, but the 'map object from screen' button
+  # The dropdown menu used for our navigation purposes
   def modeler_dropdown():
     return Sys.Process("insight").Window("TkTopLevel", "dropmodelerType", 1).Window("TkChild", "", 1).Window("TkChild", "", 1)
     
-  #scroll bar on the dropdown menu
+  # Scroll bar on the dropdown menu
   def modeler_dropdown_scrollbar():
     return NameMapping.Sys.Process("insight").Window("TkTopLevel", "dropmodelerType", 1).Window("TkChild", "", 1).Window("ScrollBar", "", 1)  
   
   
-  # model material selection
+  # Model material selection
   def model_material():
     return conf_mod_path().Window("TkChild", "", 14).Window("TkChild", "", 1)
   
-  # side button to access the drop down menu for model material to be able to use the Up and down commands
+  # Side button to access the drop down menu for model material to be able to use the Up and down commands
   def model_material_button():
     return conf_mod_path().Window("TkChild", "", 14).Window("Button", "", 1)
   
-  # model material dropdown menu
+  # Model material dropdown menu
   def model_material_dropdown():
     return Sys.Process("insight").Window("TkTopLevel", "dropmodelMaterial", 1).Window("TkChild", "", 1).Window("TkChild", "", 1)
      
     
-  # model material color selection
+  # Model material color selection
   def model_material_color():
     return conf_mod_path().Window("TkChild", "", 12).Window("TkChild", "", 1)
     
     
-  # support material selection
+  # Support material selection
   def support_material():
     return conf_mod_path().Window("TkChild", "", 10).Window("TkChild", "", 1)
   
-  # support material button to access the dropdown
+  # Support material button to access the dropdown
   def support_material_button():
     return conf_mod_path().Window("TkChild", "", 10).Window("Button", "", 1)
   
-  # support material dropdown menu
+  # Support material dropdown menu
   def support_material_dropdown():
     return Sys.Process("insight").Window("TkTopLevel", "dropsupportMaterial", 1).Window("TkChild", "", 1).Window("TkChild", "", 1)
     
         
-  # slice height selection
+  # Slice height selection
   def slice_height():
     return conf_mod_path().Window("TkChild", "", 6).Window("TkChild", "", 1)  
   
-  # slice height button dropdown to access the dropdown
+  # Slice height button dropdown to access the dropdown
   def slice_height_button():
     return conf_mod_path().Window("TkChild", "", 6).Window("Button", "", 1)
   
-  # slice height dropdown menu
+  # Slice height dropdown menu
   def slice_height_dropdown():
     return Sys.Process("insight").Window("TkTopLevel", "dropsliceHeight", 1).Window("TkChild", "", 1).Window("TkChild", "", 1)
     
     
-  # model tip selection  
+  # Model tip selection  
   def model_tip():
     return Sys.Process("insight").Window("TkTopLevel", "Configure Modeler", 1).Window("TkChild", "", 1).Window("TkChild", "", 3).Window("TkChild", "", 1).Window("TkChild", "", 4).Window("TkChild", "", 1)
   
@@ -897,26 +827,25 @@ class config_mod_screen():
     return Sys.Process("insight").Window("TkTopLevel", "dropmodelDescriptiveTip", 1).Window("TkChild", "", 1).Window("TkChild", "", 1)
       
     
-    
-  # support tip selection  
+  # Support tip selection  
   def support_tip():
     return conf_mod_path().Window("TkChild", "", 2).Window("TkChild", "", 1)    
     
   def support_tip_button():
       return conf_mod_path().Window("TkChild", "", 2).Window("Button", "", 1)  
     
-  # need to map once there is a support tip that can be changed (Currently there is none)
+  # Need to map once there is a support tip that can be changed (Currently there are none)
    #def support_tip_dropdown():
      #return conf_mod_path()
       
       
      
-  # check button to accept
+  # Check button to accept
   def check_button():
     return Sys.Process("insight").Window("TkTopLevel", "*", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("Button", "", 3)
   
     
-  # x button to cancel
+  # 'X' button to cancel
   def x_button():
     return Sys.Process("insight").Window("TkTopLevel", "*", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("TkChild", "", 1).Window("Button", "", 1)
     
